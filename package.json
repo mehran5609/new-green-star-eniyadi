@@ -1,0 +1,9 @@
+{
+  "name": "new-green-star-eniyadi",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.4",
+    "nodemailer": "^7.0.6"
+  }
+}
