@@ -1,249 +1,1568 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>New Green Star Eniyadi | Arts & Sports Club</title>
-<meta name="description" content="New Green Star Eniyadi Arts & Sports Club, Kasaragod.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Green Star Eniyadi</title>
+
 <style>
-:root{--g:#176b3a;--gd:#0b4c29;--gl:#eaf5ed;--gold:#c99b25;--bg:#f8faf7;--ink:#172019;--muted:#68716b;--line:#dfe5df;--red:#a63232;--white:#fff}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}a{text-decoration:none;color:inherit}.wrap{width:min(1160px,calc(100% - 32px));margin:auto}button,input,textarea,select{font:inherit}button{cursor:pointer}
-header{position:sticky;top:0;z-index:30;background:#f8faf7ed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;position:relative}.brand{display:flex;align-items:center;gap:11px}.logo{width:48px;height:48px;display:grid;place-items:center;overflow:hidden}.logo img{width:100%;height:100%;object-fit:contain}.brand b{display:block;font-size:14px}.brand small{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1.5px}nav{display:flex;gap:5px;align-items:center}nav a{padding:8px 10px;border-radius:6px;color:#505952;font-size:13px}nav a:hover{background:var(--gl);color:var(--gd)}.admin{background:var(--g);color:#fff!important;margin-left:7px}.menu{display:none;border:0;background:none;font-size:23px}
-.hero{padding:88px 0;background:linear-gradient(135deg,#f7fbf7,#edf7ef);border-bottom:1px solid var(--line)}.heroGrid{display:grid;grid-template-columns:1.12fr .88fr;gap:62px;align-items:center}.kicker,.label{color:var(--g);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:2px}.malayalam-title{text-align:center;font-size:clamp(30px,5vw,58px);font-weight:900;line-height:1.1;letter-spacing:-1.5px;margin-bottom:13px;font-family:"Noto Sans Malayalam","Nirmala UI","Kartika",sans-serif}.malayalam-title span:nth-child(1){color:var(--g)}.malayalam-title span:nth-child(2){color:var(--gold)}.malayalam-title span:nth-child(3){color:var(--gd)}.hero h1{font-size:clamp(44px,7vw,80px);line-height:.96;letter-spacing:-5px;margin:17px 0}.hero h1 span{color:var(--g)}.hero p{color:var(--muted);max-width:610px}.buttons{display:flex;gap:10px;margin-top:27px;flex-wrap:wrap}.btn{border:1px solid var(--g);border-radius:7px;padding:10px 16px;font-weight:700;font-size:13px;background:#fff;color:var(--gd)}.btn.primary{background:var(--g);color:#fff}.btn.danger{border-color:#e2b5b5;color:var(--red);background:#fff}.btn:disabled{opacity:.55;cursor:not-allowed}
-.card,.panel,.adminStat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;box-shadow:0 14px 40px #164d2b0d}.cardHead{display:flex;justify-content:space-between;margin-bottom:19px;font-size:13px;font-weight:800}.live{color:var(--g);font-size:10px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.stat{background:var(--gl);padding:16px 10px;border-radius:8px}.stat b{display:block;color:var(--gd);font-size:24px}.stat small{color:var(--muted);font-size:10px}.latest{border-top:1px solid var(--line);margin-top:20px;padding-top:16px;font-size:11px;color:var(--muted)}
-section{padding:78px 0}.sectionHead{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:30px}.sectionHead h2{font-size:clamp(30px,4vw,48px);line-height:1;letter-spacing:-2px;margin-top:7px}.sectionHead p{max-width:520px;color:var(--muted);font-size:13px}.achievements{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.achievement{background:#fff;border:1px solid var(--line);border-radius:10px;padding:23px;min-height:185px}.year{color:var(--gold);font-weight:800;font-size:12px}.achievement h3{margin:30px 0 7px;font-size:17px}.achievement p{font-size:12px;color:var(--muted)}
-.certGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.cert{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}.cert img{display:block;width:100%;height:280px;object-fit:cover;object-position:center}.cert figcaption{padding:13px;font-size:11px;font-weight:800;line-height:1.4}.cert figcaption span{display:block;color:var(--muted);font-weight:500;margin-top:3px}
-.members{background:#f0f6f1;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.tools input{border:1px solid var(--line);border-radius:7px;padding:10px 12px;min-width:230px;outline:none}.tools input:focus{border-color:var(--g)}.memberGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.member{background:#fff;border:1px solid var(--line);border-radius:9px;padding:17px;display:flex;align-items:center;gap:12px}.avatar{width:42px;height:42px;border-radius:50%;background:var(--gl);color:var(--g);display:grid;place-items:center;font-weight:800;font-size:12px;flex:none}.member h3{font-size:13px}.member p{font-size:10px;color:var(--muted)}.status{margin-left:auto;font-size:9px;font-weight:800;padding:5px 7px;border-radius:4px;white-space:nowrap}.paid{background:#e3f4e8;color:#176b3a}.pending{background:#fff1d4;color:#926a12}
-.aboutGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}.about h2{font-size:clamp(30px,4vw,48px);line-height:1;letter-spacing:-2px;margin-top:8px}.about p{color:var(--muted);font-size:13px;margin-top:17px}.details{margin-top:22px;padding:17px;border:1px solid var(--line);border-radius:9px;background:#fff;font-size:12px}.details b{display:block;color:var(--gd);margin-bottom:5px}.values{border-top:1px solid var(--line)}.value{padding:16px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:45px 1fr;gap:10px}.value b{color:var(--gold)}.value h3{font-size:14px}.value p{margin-top:2px;color:var(--muted);font-size:12px}
-.finance{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.financeCards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}.financeCard{border:1px solid var(--line);border-radius:9px;padding:18px;background:var(--bg)}.financeCard small{color:var(--muted);font-size:10px}.financeCard b{display:block;font-size:24px;color:var(--gd)}.budgetPublic{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.budgetPublic .item{border:1px solid var(--line);border-radius:9px;padding:16px;background:#fff}.budgetPublic .item h3{font-size:14px}.budgetPublic .item p{font-size:11px;color:var(--muted);margin-top:4px}.money{font-weight:800;color:var(--gd)}
-.contact{background:var(--gd);color:#fff}.contactBox{display:flex;align-items:center;justify-content:space-between;gap:40px}.contact h2{font-size:clamp(30px,4vw,50px);line-height:1;letter-spacing:-2px}.contact p{color:#cbd8ce;font-size:13px;margin-top:12px}.contact .btn{border:0;margin-top:0}.clubEmail{color:#fff;font-weight:800}
-footer{background:#09391e;color:#aebeb3;padding:25px 0;font-size:11px}.foot{display:flex;justify-content:space-between}
-.hidden{display:none!important}.toast{position:fixed;right:18px;bottom:18px;z-index:200;background:#123b25;color:#fff;padding:12px 15px;border-radius:8px;font-size:12px;box-shadow:0 10px 30px #0003;opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:translateY(0)}.modal{position:fixed;inset:0;background:#07150bb3;display:none;place-items:center;padding:20px;z-index:100}.modal.open{display:grid}.modalCard{background:#fff;width:min(420px,100%);padding:27px;border-radius:12px}.modalCard h2{font-size:23px}.modalCard p{font-size:12px;color:var(--muted);margin:6px 0 18px}.modalCard label,.group label{font-size:10px;font-weight:800;display:block;margin-bottom:4px}.input,.select,.textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;margin-bottom:11px;outline:none;background:#fff}.textarea{min-height:120px;resize:vertical}.input:focus,.select:focus,.textarea:focus{border-color:var(--g)}.error{display:none;color:#b83232;font-size:11px;margin-bottom:10px}.modalActions{display:flex;justify-content:flex-end;gap:8px}.loading{padding:30px;text-align:center;color:var(--muted);font-size:12px}.empty{padding:25px;color:var(--muted);font-size:12px;text-align:center;border:1px dashed var(--line);border-radius:8px}
-.adminPage{display:none;min-height:100vh;background:#f3f7f4}.adminPage.active{display:block}.publicPage.hidden{display:none}.adminTop{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30}.adminNav{min-height:68px;display:flex;align-items:center;justify-content:space-between}.adminNav h1{font-size:20px}.adminNav h1 span{color:var(--g)}.adminMain{padding:38px 0}.adminStats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:15px}.adminStat small{color:var(--muted);font-size:10px}.adminStat b{display:block;color:var(--gd);font-size:23px}.adminGrid{display:grid;grid-template-columns:340px 1fr;gap:15px;margin-bottom:15px}.panel h2{font-size:15px;margin-bottom:15px}.group{margin-bottom:5px}.panelGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.tableWrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:620px}th,td{text-align:left;border-bottom:1px solid var(--line);padding:10px 7px;font-size:11px}th{font-size:9px;color:var(--muted);text-transform:uppercase}.action{border:0;border-radius:4px;padding:6px 8px;background:var(--gl);color:var(--gd);font-size:9px;font-weight:800;margin-right:4px}.action.delete{background:#faeaea;color:#a42d2d}.subBar{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:15px;padding-bottom:14px;border-bottom:1px solid var(--line)}.monthLabel{display:block;font-size:10px;font-weight:800;margin-bottom:4px}.monthInput{margin:0!important;width:170px}.monthInfo{font-size:11px;color:var(--muted);padding-bottom:9px;font-weight:700}.twoCols{display:grid;grid-template-columns:1fr 1fr;gap:15px}.adminSection{margin-bottom:15px}.smallNote{font-size:10px;color:var(--muted);margin-top:9px}.messageResult{font-size:11px;color:var(--g);margin-top:10px}.dangerText{color:var(--red)}
-@media(max-width:950px){.heroGrid,.aboutGrid,.adminGrid{grid-template-columns:1fr}.achievements{grid-template-columns:1fr 1fr}.memberGrid{grid-template-columns:1fr 1fr}.certGrid{grid-template-columns:1fr 1fr}.adminStats{grid-template-columns:1fr 1fr}.budgetPublic{grid-template-columns:1fr 1fr}.twoCols{grid-template-columns:1fr}}
-@media(max-width:650px){.wrap{width:calc(100% - 24px)}nav{display:none}.menu{display:block}.nav.open nav{display:flex;position:absolute;top:68px;left:0;right:0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px;flex-direction:column;align-items:stretch}.admin{margin:4px 0 0}.hero{padding:62px 0}.hero h1{letter-spacing:-3px}.sectionHead{align-items:flex-start;flex-direction:column}.achievements,.memberGrid,.certGrid,.budgetPublic{grid-template-columns:1fr}.stats,.financeCards{grid-template-columns:1fr}.tools,.tools input{width:100%}.adminStats{grid-template-columns:1fr 1fr}.panelGrid{grid-template-columns:1fr}.foot{flex-direction:column;gap:7px}.cert img{height:auto;max-height:430px}.contactBox{align-items:flex-start;flex-direction:column}}
-
-#siteSplash{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#f8faf7;opacity:1;visibility:visible;pointer-events:auto;animation:splashExit .9s 1.8s cubic-bezier(.22,1,.36,1) forwards;transition:none}.siteSplash.hide{opacity:0;visibility:hidden;pointer-events:none}.siteSplashLogo{width:clamp(150px,24vw,250px);height:auto;object-fit:contain;filter:drop-shadow(0 18px 35px rgba(23,107,58,.18));animation:splashLogo 1.35s cubic-bezier(.22,1,.36,1) both}.siteSplashGlow{position:absolute;width:min(42vw,420px);height:min(42vw,420px);border-radius:50%;background:radial-gradient(circle,rgba(23,107,58,.1),rgba(23,107,58,0) 68%);animation:splashGlow 1.6s ease-out both;pointer-events:none}.pageMotion{overflow-x:hidden}.hero .heroGrid>div:first-child{animation:heroIn .9s .25s cubic-bezier(.22,1,.36,1) both}.hero .heroGrid>.card{animation:heroCard .9s .42s cubic-bezier(.22,1,.36,1) both}.hero .malayalam-title span{display:inline-block;animation:wordIn .8s cubic-bezier(.22,1,.36,1) both}.hero .malayalam-title span:nth-child(1){animation-delay:.3s}.hero .malayalam-title span:nth-child(2){animation-delay:.4s}.hero .malayalam-title span:nth-child(3){animation-delay:.5s}.hero .buttons .btn{transition:transform .25s ease,box-shadow .25s ease,background .25s ease}.hero .buttons .btn:hover{transform:translateY(-4px);box-shadow:0 12px 25px rgba(23,107,58,.15)}.reveal{opacity:0;transform:translateY(32px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}.reveal.is-visible{opacity:1;transform:none}.achievement,.cert,.member,.financeCard,.budgetPublic .item,.details,.value,.panel,.adminStat{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}.achievement:hover,.cert:hover,.member:hover,.financeCard:hover,.budgetPublic .item:hover,.details:hover,.value:hover,.panel:hover,.adminStat:hover{transform:translateY(-5px);box-shadow:0 18px 45px rgba(22,77,43,.1);border-color:#cbd9ce}.nav a{position:relative;transition:color .25s ease,background .25s ease}.nav a:not(.admin)::after{content:'';position:absolute;left:10px;right:10px;bottom:4px;height:2px;border-radius:2px;background:var(--g);transform:scaleX(0);transform-origin:center;transition:transform .25s ease}.nav a:not(.admin):hover::after{transform:scaleX(1)}.adminPage.active .adminNav{animation:adminDrop .55s cubic-bezier(.22,1,.36,1)}.adminPage.active .adminStat{animation:adminRise .55s cubic-bezier(.22,1,.36,1) both}.adminPage.active .adminStat:nth-child(1){animation-delay:.05s}.adminPage.active .adminStat:nth-child(2){animation-delay:.1s}.adminPage.active .adminStat:nth-child(3){animation-delay:.15s}.adminPage.active .adminStat:nth-child(4){animation-delay:.2s}.waPanel{position:relative;overflow:hidden}.waPanel::before{content:'';position:absolute;top:-90px;right:-70px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(37,211,102,.15),transparent 70%);pointer-events:none}.waBadge{display:inline-flex;align-items:center;gap:7px;padding:5px 9px;border-radius:999px;background:#e8f8ee;color:#128c4b;font-size:9px;font-weight:800;margin-bottom:10px}.waDot{width:7px;height:7px;border-radius:50%;background:#25d366;box-shadow:0 0 0 5px rgba(37,211,102,.12)}.waButton{position:relative;overflow:hidden}.waButton::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 25%,rgba(255,255,255,.22) 50%,transparent 75%);transform:translateX(-120%);transition:transform .65s ease}.waButton:hover::after{transform:translateX(120%)}.waHint{font-size:10px;color:var(--muted);margin-top:8px;line-height:1.5}
-@keyframes splashLogo{0%{opacity:0;transform:scale(.72) rotate(-5deg)}55%{opacity:1;transform:scale(1.05) rotate(1deg)}100%{opacity:1;transform:scale(1) rotate(0)}}@keyframes splashExit{0%{opacity:1;visibility:visible;pointer-events:auto}99%{opacity:0;visibility:visible;pointer-events:none}100%{opacity:0;visibility:hidden;pointer-events:none}}
-@keyframes splashGlow{0%{opacity:0;transform:scale(.6)}55%{opacity:1;transform:scale(1.08)}100%{opacity:.8;transform:scale(1)}}
-@keyframes heroIn{0%{opacity:0;transform:translateX(-35px)}100%{opacity:1;transform:none}}
-@keyframes heroCard{0%{opacity:0;transform:translateX(35px) scale(.97)}100%{opacity:1;transform:none}}
-@keyframes wordIn{0%{opacity:0;transform:translateY(20px) scale(.94)}100%{opacity:1;transform:none}}
-@keyframes adminDrop{0%{opacity:0;transform:translateY(-14px)}100%{opacity:1;transform:none}}
-@keyframes adminRise{0%{opacity:0;transform:translateY(16px)}100%{opacity:1;transform:none}}
-@media(max-width:650px){.siteSplashLogo{width:180px}.reveal{transform:translateY(22px)}.achievement:hover,.cert:hover,.member:hover,.financeCard:hover,.budgetPublic .item:hover,.details:hover,.value:hover,.panel:hover,.adminStat:hover{transform:none;box-shadow:0 14px 40px #164d2b0d}}
-@media(max-width:650px){
-  *,
-  *::before,
-  *::after{
-    box-sizing:border-box;
-  }
-
-  html,
-  body{
-    width:100%;
-    max-width:100%;
-    overflow-x:hidden;
-  }
-
-  .wrap{
-    width:calc(100% - 24px);
-    max-width:100%;
-  }
-
-  .adminPage,
-  .adminMain,
-  .adminGrid,
-  .adminGrid > *,
-  .panel,
-  .panelGrid,
-  .twoCols,
-  .waPanel{
-    width:100%;
-    max-width:100%;
-    min-width:0;
-  }
-
-  .adminGrid,
-  .panelGrid,
-  .twoCols{
-    grid-template-columns:1fr;
-  }
-
-  .adminStats{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .adminNav{
-    width:100%;
-    max-width:100%;
-    flex-direction:column;
-    align-items:stretch;
-    gap:10px;
-  }
-
-  .adminNav .buttons{
-    width:100%;
-    max-width:100%;
-    flex-direction:column;
-  }
-
-  .adminNav .buttons .btn{
-    width:100%;
-  }
-
-  .tableWrap{
-    width:100%;
-    max-width:100%;
-    min-width:0;
-    overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
-  }
-
-  .tableWrap table{
-    min-width:620px;
-  }
-
-  .tools{
-    width:100%;
-    max-width:100%;
-  }
-
-  .tools input,
-  .tools select,
-  .tools button{
-    max-width:100%;
-  }
-
-  .achievements,
-  .memberGrid,
-  .certGrid,
-  .budgetPublic{
-    grid-template-columns:1fr;
-  }
-
-  .stats,
-  .financeCards{
-    grid-template-columns:1fr;
-  }
-
-  .foot{
-    flex-direction:column;
-    gap:7px;
-  }
-
-  .cert img{
-    height:auto;
-    max-height:430px;
-  }
-
-  .contactBox{
-    align-items:flex-start;
-    flex-direction:column;
-  }
-
-  .reveal{
-    transform:translateY(22px);
-  }
-
-  .achievement:hover,
-  .cert:hover,
-  .member:hover,
-  .financeCard:hover,
-  .budgetPublic .item:hover,
-  .details:hover,
-  .value:hover,
-  .panel:hover,
-  .adminStat:hover{
-    transform:none;
-    box-shadow:0 14px 40px #164d2b0d;
-  }
+*{
+box-sizing:border-box;
+margin:0;
+padding:0
 }
 
-.siteAnimated{overflow-x:hidden}.siteAnimated header{animation:headerDrop .9s cubic-bezier(.22,1,.36,1) 2.35s both}.hero{position:relative;overflow:hidden}.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;pointer-events:none;filter:blur(2px)}.hero::before{width:420px;height:420px;left:-190px;top:-190px;background:radial-gradient(circle,rgba(23,107,58,.13),rgba(23,107,58,0) 70%);animation:orbFloat 9s ease-in-out infinite}.hero::after{width:360px;height:360px;right:-150px;bottom:-160px;background:radial-gradient(circle,rgba(201,155,37,.12),rgba(201,155,37,0) 70%);animation:orbFloat 11s ease-in-out infinite reverse}.heroGrid{position:relative;z-index:1}.hero .kicker{animation:heroKicker .8s 2.48s cubic-bezier(.22,1,.36,1) both}.hero h1{animation:heroTitle 1s 2.58s cubic-bezier(.22,1,.36,1) both}.hero p{animation:heroText .8s 2.76s cubic-bezier(.22,1,.36,1) both}.hero .buttons{animation:heroButtons .8s 2.9s cubic-bezier(.22,1,.36,1) both}.hero .card{position:relative;animation:heroCard 1s 2.62s cubic-bezier(.22,1,.36,1) both}.hero .card::after{content:"";position:absolute;inset:0;border-radius:12px;border:1px solid rgba(23,107,58,.08);pointer-events:none;animation:cardPulse 3.5s ease-in-out 3.4s infinite}.sectionHead,.aboutGrid,.contactBox{will-change:transform,opacity;opacity:0;transform:translateY(42px) scale(.985);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}.sectionHead.is-visible,.aboutGrid.is-visible,.contactBox.is-visible{opacity:1;transform:none}.sectionHead h2{position:relative}.sectionHead h2::after{content:"";display:block;width:0;height:3px;border-radius:4px;background:linear-gradient(90deg,var(--g),var(--gold));margin-top:12px;transition:width 1s cubic-bezier(.22,1,.36,1)}.sectionHead.is-visible h2::after{width:72px}.achievement,.cert,.member,.financeCard,.budgetPublic .item,.value,.details{opacity:0;transform:translateY(30px) scale(.97)}.achievement.animateIn,.cert.animateIn,.member.animateIn,.financeCard.animateIn,.budgetPublic .item.animateIn,.value.animateIn,.details.animateIn{animation:cardIn .72s cubic-bezier(.22,1,.36,1) both}.achievement:nth-child(2),.cert:nth-child(2),.member:nth-child(2),.financeCard:nth-child(2),.budgetPublic .item:nth-child(2),.value:nth-child(2){animation-delay:.08s}.achievement:nth-child(3),.cert:nth-child(3),.member:nth-child(3),.financeCard:nth-child(3),.budgetPublic .item:nth-child(3),.value:nth-child(3){animation-delay:.16s}.achievement:nth-child(4),.cert:nth-child(4),.member:nth-child(4),.budgetPublic .item:nth-child(4),.value:nth-child(4){animation-delay:.24s}.achievement:nth-child(5),.member:nth-child(5),.budgetPublic .item:nth-child(5),.value:nth-child(5){animation-delay:.32s}.achievement:nth-child(6),.member:nth-child(6),.budgetPublic .item:nth-child(6),.value:nth-child(6){animation-delay:.4s}.achievement:hover,.cert:hover,.member:hover,.financeCard:hover,.budgetPublic .item:hover,.details:hover,.value:hover{transform:translateY(-9px) scale(1.015);box-shadow:0 22px 48px rgba(22,77,43,.13);transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease,border-color .35s ease}.cert{transform-origin:center bottom}.cert:hover img{transform:scale(1.035)}.cert img{transition:transform .65s cubic-bezier(.22,1,.36,1)}.member{position:relative;overflow:hidden}.member::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--g),var(--gold));transform:scaleY(0);transform-origin:bottom;transition:transform .35s ease}.member:hover::before{transform:scaleY(1)}.avatar{transition:transform .35s ease,box-shadow .35s ease}.member:hover .avatar{transform:rotate(-8deg) scale(1.08);box-shadow:0 8px 20px rgba(23,107,58,.16)}.financeCard b{transition:transform .35s ease}.financeCard:hover b{transform:translateX(5px)}.value b{transition:transform .35s ease;display:inline-block}.value:hover b{transform:translateX(5px)}.contact{position:relative;overflow:hidden}.contact::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;right:-170px;top:-210px;background:radial-gradient(circle,rgba(255,255,255,.11),transparent 68%);animation:orbFloat 10s ease-in-out infinite}.contactBox{position:relative;z-index:1}.contact .btn{transition:transform .3s ease,box-shadow .3s ease}.contact .btn:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 14px 30px rgba(0,0,0,.2)}footer{position:relative;overflow:hidden}footer::after{content:"";position:absolute;left:-20%;right:-20%;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(201,155,37,.75),transparent);animation:lineSweep 4s linear infinite}.toast.show{animation:toastIn .35s cubic-bezier(.22,1,.36,1)}.nav a{transition:transform .25s ease,color .25s ease,background .25s ease}.nav a:hover{transform:translateY(-2px)}.admin{transition:transform .25s ease,box-shadow .25s ease}.admin:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(23,107,58,.2)}.stat{transition:transform .3s ease,background .3s ease}.stat:hover{transform:translateY(-4px);background:#e2f1e6}.cardHead .live{animation:livePulse 1.8s ease-in-out infinite}.siteAnimated .adminPage.active .adminMain{animation:adminPageIn .65s cubic-bezier(.22,1,.36,1) both}.siteAnimated .adminPage.active .panel{animation:panelIn .65s cubic-bezier(.22,1,.36,1) both}.siteAnimated .adminPage.active .panel:nth-child(2){animation-delay:.08s}.siteAnimated .adminPage.active .panel:nth-child(3){animation-delay:.16s}.siteAnimated .adminPage.active .panel:nth-child(4){animation-delay:.24s}.siteAnimated .adminPage.active .panel:nth-child(5){animation-delay:.32s}.modal.open .modalCard{animation:modalIn .4s cubic-bezier(.22,1,.36,1) both}.buttons .btn{position:relative;overflow:hidden}.buttons .btn::after{content:"";position:absolute;inset:-2px;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.35) 50%,transparent 65%);transform:translateX(-130%);transition:transform .7s ease}.buttons .btn:hover::after{transform:translateX(130%)}
-@keyframes headerDrop{0%{opacity:0;transform:translateY(-18px)}100%{opacity:1;transform:none}}@keyframes heroKicker{0%{opacity:0;transform:translateY(18px);letter-spacing:7px}100%{opacity:1;transform:none;letter-spacing:2px}}@keyframes heroTitle{0%{opacity:0;transform:translateY(35px) scale(.96)}100%{opacity:1;transform:none}}@keyframes heroText{0%{opacity:0;transform:translateY(22px)}100%{opacity:1;transform:none}}@keyframes heroButtons{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:none}}@keyframes heroCard{0%{opacity:0;transform:translateX(45px) rotate(1deg) scale(.94)}100%{opacity:1;transform:none}}@keyframes cardPulse{0%,100%{box-shadow:0 0 0 0 rgba(23,107,58,0)}50%{box-shadow:0 0 0 8px rgba(23,107,58,.045)}}@keyframes orbFloat{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(20px,18px,0) scale(1.06)}}@keyframes cardIn{0%{opacity:0;transform:translateY(30px) scale(.97)}100%{opacity:1;transform:none}}@keyframes lineSweep{0%{transform:translateX(-30%)}100%{transform:translateX(30%)}}@keyframes livePulse{0%,100%{opacity:1}50%{opacity:.45}}@keyframes toastIn{0%{opacity:0;transform:translateY(15px) scale(.96)}100%{opacity:1;transform:none}}@keyframes adminPageIn{0%{opacity:0;transform:translateY(18px)}100%{opacity:1;transform:none}}@keyframes panelIn{0%{opacity:0;transform:translateY(22px) scale(.98)}100%{opacity:1;transform:none}}@keyframes modalIn{0%{opacity:0;transform:translateY(18px) scale(.96)}100%{opacity:1;transform:none}}
+html{
+scroll-behavior:smooth
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f7f5;
+color:#111;
+overflow-x:hidden
+}
+
+#siteSplash{
+position:fixed;
+inset:0;
+z-index:99999;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#000;
+transition:opacity 1s ease,visibility 1s ease
+}
+
+#siteSplash.hide{
+opacity:0;
+visibility:hidden
+}
+
+.siteSplashLogo{
+width:170px;
+height:170px;
+object-fit:contain;
+animation:splashLogo 1.8s ease forwards
+}
+
+@keyframes splashLogo{
+0%{
+opacity:0;
+transform:scale(.45) rotate(-8deg)
+}
+55%{
+opacity:1;
+transform:scale(1.08) rotate(2deg)
+}
+100%{
+opacity:1;
+transform:scale(1)
+}
+}
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:#050505;
+color:white;
+box-shadow:0 4px 20px rgba(0,0,0,.25);
+animation:navDrop .8s ease both
+}
+
+@keyframes navDrop{
+from{
+transform:translateY(-100%);
+opacity:0
+}
+to{
+transform:translateY(0);
+opacity:1
+}
+}
+
+nav{
+max-width:1200px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+padding:14px 20px
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:800;
+font-size:18px
+}
+
+.logo img{
+width:48px;
+height:48px;
+object-fit:contain;
+animation:logoFloat 3s ease-in-out infinite
+}
+
+@keyframes logoFloat{
+0%,100%{
+transform:translateY(0)
+}
+50%{
+transform:translateY(-4px)
+}
+}
+
+.navLinks{
+display:flex;
+align-items:center;
+gap:6px;
+flex-wrap:wrap
+}
+
+.navLinks a{
+color:white;
+text-decoration:none;
+padding:9px 13px;
+border-radius:8px;
+font-weight:600;
+transition:.25s
+}
+
+.navLinks a:hover{
+background:#176b32;
+transform:translateY(-2px)
+}
+
+.adminBtn{
+background:#176b32!important
+}
+
+section{
+max-width:1200px;
+margin:auto;
+padding:75px 20px
+}
+
+.hero{
+min-height:680px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+overflow:hidden
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:500px;
+height:500px;
+background:rgba(34,139,60,.12);
+border-radius:50%;
+filter:blur(5px);
+animation:heroBlob 7s ease-in-out infinite
+}
+
+@keyframes heroBlob{
+0%,100%{
+transform:translate(0,0) scale(1)
+}
+50%{
+transform:translate(60px,-30px) scale(1.15)
+}
+}
+
+.heroContent{
+position:relative;
+z-index:2;
+animation:heroIn 1.2s ease both
+}
+
+@keyframes heroIn{
+from{
+opacity:0;
+transform:translateY(40px)
+}
+to{
+opacity:1;
+transform:translateY(0)
+}
+}
+
+.malayalam{
+font-size:clamp(30px,6vw,70px);
+font-weight:900;
+margin-bottom:25px
+}
+
+.malayalam span:nth-child(1){
+color:#16843c
+}
+
+.malayalam span:nth-child(2){
+color:#d89b00
+}
+
+.malayalam span:nth-child(3){
+color:#c92828
+}
+
+.hero h1{
+font-size:clamp(34px,7vw,78px);
+line-height:1;
+margin-bottom:18px;
+font-weight:900
+}
+
+.hero p{
+font-size:18px;
+max-width:700px;
+margin:auto;
+line-height:1.7;
+color:#555
+}
+
+.sectionTitle{
+font-size:38px;
+font-weight:900;
+margin-bottom:35px;
+text-align:center
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px
+}
+
+.card{
+background:white;
+border-radius:18px;
+padding:28px;
+box-shadow:0 8px 30px rgba(0,0,0,.08);
+transition:.35s;
+opacity:0;
+transform:translateY(35px)
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0)
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 40px rgba(0,0,0,.14)
+}
+
+.achievement{
+overflow:hidden;
+padding:0
+}
+
+.achievement img{
+width:100%;
+height:280px;
+object-fit:cover;
+display:block;
+transition:.5s
+}
+
+.achievement:hover img{
+transform:scale(1.06)
+}
+
+.achievementInfo{
+padding:22px
+}
+
+.membersGrid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px
+}
+
+.memberCard{
+background:white;
+border-radius:18px;
+padding:25px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.3s;
+opacity:0;
+transform:scale(.95)
+}
+
+.memberCard.show{
+opacity:1;
+transform:scale(1)
+}
+
+.memberCard:hover{
+transform:translateY(-7px)
+}
+
+.memberAvatar{
+width:90px;
+height:90px;
+border-radius:50%;
+background:#176b32;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+font-weight:900;
+margin:0 auto 15px;
+overflow:hidden
+}
+
+.memberAvatar img{
+width:100%;
+height:100%;
+object-fit:cover
+}
+
+.memberCard h3{
+margin-bottom:7px
+}
+
+.memberRole{
+color:#176b32;
+font-weight:700;
+margin-bottom:8px
+}
+
+.memberContact{
+color:#666;
+font-size:14px;
+line-height:1.7
+}
+
+.aboutBox{
+background:#101010;
+color:white;
+border-radius:22px;
+padding:45px;
+box-shadow:0 15px 45px rgba(0,0,0,.18)
+}
+
+.aboutBox p{
+line-height:1.9;
+color:#ddd
+}
+
+.contactGrid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px
+}
+
+.contactBox{
+background:white;
+border-radius:18px;
+padding:28px;
+box-shadow:0 8px 25px rgba(0,0,0,.08)
+}
+
+footer{
+background:#050505;
+color:#aaa;
+text-align:center;
+padding:30px 20px
+}
+
+.adminPage{
+display:none
+}
+
+.adminPage.active{
+display:block
+}
+
+.adminHeader{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
+margin-bottom:30px
+}
+
+.adminHeader h2{
+font-size:32px
+}
+
+.adminActions{
+display:flex;
+gap:10px;
+flex-wrap:wrap
+}
+
+button{
+border:0;
+border-radius:9px;
+padding:11px 16px;
+font-weight:700;
+cursor:pointer;
+transition:.25s
+}
+
+button:hover{
+transform:translateY(-2px)
+}
+
+.primary{
+background:#176b32;
+color:white
+}
+
+.secondary{
+background:#eee;
+color:#111
+}
+
+.danger{
+background:#b52222;
+color:white
+}
+
+.adminGrid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px
+}
+
+.adminCard{
+background:white;
+border-radius:18px;
+padding:25px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+margin-bottom:20px
+}
+
+.adminCard h3{
+margin-bottom:18px
+}
+
+.formGrid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px
+}
+
+input,select,textarea{
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:9px;
+font:inherit;
+background:white
+}
+
+textarea{
+resize:vertical;
+min-height:90px
+}
+
+.full{
+grid-column:1/-1
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-bottom:25px
+}
+
+.stat{
+background:#101010;
+color:white;
+border-radius:16px;
+padding:22px
+}
+
+.stat small{
+display:block;
+color:#aaa;
+margin-bottom:7px
+}
+
+.stat strong{
+font-size:28px
+}
+
+.tableWrap{
+width:100%;
+overflow:auto
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+min-width:650px
+}
+
+th,td{
+padding:12px;
+border-bottom:1px solid #eee;
+text-align:left;
+font-size:14px
+}
+
+th{
+background:#f5f5f5
+}
+
+.paid{
+color:#16843c;
+font-weight:800
+}
+
+.pending{
+color:#c27b00;
+font-weight:800
+}
+
+.modal{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.72);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:9999;
+padding:20px
+}
+
+.modal.active{
+display:flex
+}
+
+.modalBox{
+background:white;
+width:min(430px,100%);
+padding:28px;
+border-radius:18px;
+animation:modalIn .3s ease
+}
+
+@keyframes modalIn{
+from{
+opacity:0;
+transform:scale(.9)
+}
+to{
+opacity:1;
+transform:scale(1)
+}
+}
+
+.modalBox h3{
+margin-bottom:18px
+}
+
+.modalButtons{
+display:flex;
+justify-content:flex-end;
+gap:10px;
+margin-top:18px
+}
+
+.budgetTotal{
+font-size:30px;
+font-weight:900;
+color:#176b32;
+margin-bottom:18px
+}
+
+.whatsappBox{
+background:#101010;
+color:white
+}
+
+.whatsappBox input,
+.whatsappBox textarea{
+background:#1b1b1b;
+border-color:#333;
+color:white
+}
+
+.whatsappBox p{
+color:#aaa;
+margin-bottom:15px
+}
+
+.reveal{
+opacity:0;
+transform:translateY(35px);
+transition:opacity .8s ease,transform .8s ease
+}
+
+.reveal.show{
+opacity:1;
+transform:translateY(0)
+}
+
+@media(max-width:900px){
+.cards,
+.membersGrid{
+grid-template-columns:repeat(2,1fr)
+}
+
+.adminGrid{
+grid-template-columns:1fr
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr)
+}
+}
+
+@media(max-width:650px){
+nav{
+align-items:flex-start;
+flex-direction:column
+}
+
+.navLinks{
+width:100%;
+overflow-x:auto;
+flex-wrap:nowrap
+}
+
+.navLinks a{
+white-space:nowrap
+}
+
+.hero{
+min-height:560px
+}
+
+.cards,
+.membersGrid,
+.contactGrid{
+grid-template-columns:1fr
+}
+
+.formGrid{
+grid-template-columns:1fr
+}
+
+.full{
+grid-column:auto
+}
+
+.aboutBox{
+padding:28px 20px
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr)
+}
+
+.adminHeader{
+align-items:flex-start;
+flex-direction:column
+}
+
+.adminActions{
+width:100%
+}
+
+.adminActions button{
+flex:1
+}
+
+.tableWrap{
+width:100%;
+overflow:visible
+}
+
+table{
+width:100%;
+min-width:0;
+table-layout:fixed
+}
+
+th,td{
+padding:8px 5px;
+font-size:12px;
+word-break:break-word
+}
+
+.adminCard{
+padding:18px
+}
+}
 </style>
 </head>
-<body class="pageMotion">
-<div id="siteSplash" aria-hidden="true"><div class="siteSplashGlow"></div><img class="siteSplashLogo" src="./public/assets/logo.png" alt="New Green Star Eniyadi"></div>
-<div id="publicPage" class="publicPage">
-<header><div class="wrap nav" id="navWrap"><a class="brand" href="#home"><div class="logo"><img src="./public/assets/logo.png" alt="New Green Star Eniyadi logo"></div><div><b>New Green Star Eniyadi</b><small>Arts & Sports Club</small></div></a><button class="menu" onclick="toggleNav()">☰</button><nav><a href="#home">Home</a><a href="#achievements">Achievements</a><a href="#certificates">Certificates</a><a href="#members">Members</a><a href="#finance">Programs & Funds</a><a href="#about">About</a><a href="#contact">Contact</a><a href="#" class="admin" onclick="openLogin(event)">Admin</a></nav></div></header>
-<main id="home">
-<section class="hero"><div class="wrap heroGrid"><div><div class="malayalam-title"><span>കളിയും</span> <span>ചിരിയും</span> <span>കലയും</span></div><div class="kicker">Eniyadi · Community · Arts · Sports</div><h1>Growing together.<br><span>Winning together.</span></h1><p>New Green Star Eniyadi is an arts and sports club built around friendship, community, talent, participation and service.</p><div class="buttons"><a class="btn primary" href="#achievements">View achievements</a><a class="btn" href="#members">Meet the members</a></div></div><div class="card"><div class="cardHead"><span>Club at a glance</span><span class="live">ACTIVE CLUB</span></div><div class="stats"><div class="stat"><b id="heroMembers">—</b><small>Members</small></div><div class="stat"><b id="heroPaid">—</b><small>Fees paid</small></div><div class="stat"><b id="heroAchievements">—</b><small>Achievements</small></div></div><div class="latest"><b>Latest achievement</b><div id="latestAchievement">Loading club records…</div></div></div></div></section>
-<section id="achievements"><div class="wrap"><div class="sectionHead"><div><div class="label">01 / Achievements</div><h2>Moments worth remembering.</h2></div><p>Verified club milestones and recognitions recorded from the club's supplied certificates and achievement details.</p></div><div id="achievementGrid" class="achievements"><div class="loading">Loading achievements…</div></div></div></section>
-<section id="certificates"><div class="wrap"><div class="sectionHead"><div><div class="label">02 / Certificates</div><h2>Recognition earned.</h2></div><p>Certificates supplied by the club, displayed directly on the public website.</p></div><div class="certGrid"><figure class="cert"><img src="/public/assets/certificate-republic-day.jpg" alt="73rd Republic Day Certificate of Commitment"><figcaption>73rd Republic Day Certificate of Commitment<span>25 January 2022 · Ministry of Defence</span></figcaption></figure><figure class="cert"><img src="/public/assets/certificate-fit-india-run.jpg" alt="FIT India Freedom Run 2.0 certificate"><figcaption>FIT India Freedom Run 2.0<span>Successfully organized · 2021</span></figcaption></figure><figure class="cert"><img src="/public/assets/certificate-vigilance.jpg" alt="Central Vigilance Commission Certificate of Commitment"><figcaption>Certificate of Commitment<span>Central Vigilance Commission</span></figcaption></figure><figure class="cert"><img src="/public/assets/certificate-fit-india-youth.jpg" alt="FIT India Certificate of Recognition"><figcaption>FIT India Certificate of Recognition<span>FIT INDIA Youth Club recognition</span></figcaption></figure></div></div></section>
-<section id="members" class="members"><div class="wrap"><div class="sectionHead"><div><div class="label">03 / Our people</div><h2>Meet the club.</h2></div><div class="tools"><input id="search" oninput="renderPublicMembers()" placeholder="Search members…"></div></div><div id="memberGrid" class="memberGrid"><div class="loading">Loading members…</div></div></div></section>
-<section id="finance" class="finance"><div class="wrap"><div class="sectionHead"><div><div class="label">04 / Programs & funds</div><h2>Club activity tracker.</h2></div><p>Program spending and funds received are shown here from the club's budget records.</p></div><div class="financeCards"><div class="financeCard"><small>Total program cost</small><b id="publicCost">₹0</b></div><div class="financeCard"><small>Total received</small><b id="publicReceived">₹0</b></div><div class="financeCard"><small>Balance</small><b id="publicBalance">₹0</b></div></div><div id="budgetPublic" class="budgetPublic"><div class="loading">Loading program records…</div></div></div></section>
-<section id="about"><div class="wrap aboutGrid"><div class="about"><div class="label">05 / About the club</div><h2>More than a team. A community.</h2><p>New Green Star Eniyadi brings people together through sports, arts, friendship and community activities.</p><div class="details"><b>Club details</b>Reg no : 395/09<br>Society, NYK, KSYWB & Fit India affiliated<br>Bandhadka Post, Chengala (via), Kasaragod Dt 671 541</div></div><div class="values"><div class="value"><b>01</b><div><h3>Sports</h3><p>Football and activities that keep the club active.</p></div></div><div class="value"><b>02</b><div><h3>Arts & Culture</h3><p>Celebrating local talent through performances and cultural programs.</p></div></div><div class="value"><b>03</b><div><h3>Community</h3><p>A place where members participate, connect and contribute.</p></div></div><div class="value"><b>04</b><div><h3>Affiliations</h3><p>Society, NYK, KSYWB and Fit India affiliated.</p></div></div></div></div></section>
-<section id="contact" class="contact"><div class="wrap contactBox"><div><h2>Want to know more?</h2><p>Contact the club for membership information, events and activities.</p></div><a class="btn" href="mailto:newgreenstareniaydi@gmail.com">Contact the club</a></div></section>
-</main><footer><div class="wrap foot"><span>© 2026 New Green Star Eniyadi Arts & Sports Club</span><span>Reg no : 395/09 · Bandhadka Post, Chengala, Kasaragod</span></div></footer>
+
+<body>
+
+<div id="siteSplash">
+<img class="siteSplashLogo" src="./public/assets/logo.png" alt="New Green Star Eniyadi">
 </div>
 
-<div id="adminPage" class="adminPage"><div class="adminTop"><div class="wrap adminNav"><h1>New Green Star <span>Admin</span></h1><div class="buttons" style="margin:0"><button class="btn" onclick="downloadStatement()">Download statement</button><button class="btn" onclick="downloadFullReport()">Full report</button><button class="btn" onclick="exitAdmin()">Back to website</button></div></div></div>
-<main class="adminMain"><div class="wrap">
-<div class="adminStats"><div class="adminStat"><small>Total members</small><b id="total">0</b></div><div class="adminStat"><small>This month's fees</small><b id="paid">₹0</b></div><div class="adminStat"><small>Pending this month</small><b id="pending">0</b></div><div class="adminStat"><small>Monthly fee</small><b id="feeDisplay">₹0</b></div></div>
+<header>
+<nav>
+<div class="logo">
+<img src="./public/assets/logo.png" alt="Logo">
+<span>NEW GREEN STAR ENIYADI</span>
+</div>
+
+<div class="navLinks">
+<a href="#home">Home</a>
+<a href="#achievements">Achievements</a>
+<a href="#members">Members</a>
+<a href="#budget">Budget</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+<a href="#" class="adminBtn" onclick="openLogin(event)">Admin</a>
+</div>
+</nav>
+</header>
+
+<main id="publicPage">
+
+<section id="home" class="hero">
+<div class="heroContent">
+<div class="malayalam">
+<span>കളിയും</span>
+<span>ചിരിയും</span>
+<span>കലയും</span>
+</div>
+
+<h1>NEW GREEN STAR ENIYADI</h1>
+
+<p>
+A community of sports, arts, friendship and togetherness.
+Building memories, supporting talent and growing together.
+</p>
+</div>
+</section>
+
+<section id="achievements">
+<h2 class="sectionTitle reveal">Our Achievements</h2>
+
+<div class="cards">
+
+<div class="card achievement reveal">
+<img src="/public/assets/certificate-republic-day.jpg" alt="Republic Day Certificate">
+<div class="achievementInfo">
+<h3>Republic Day 73rd Certificate</h3>
+<p>Certificate of Commitment issued to New Green Star ASC Eniyadi.</p>
+</div>
+</div>
+
+<div class="card achievement reveal">
+<img src="/public/assets/certificate-fit-india-run.jpg" alt="FIT India Freedom Run">
+<div class="achievementInfo">
+<h3>FIT India Freedom Run 2.0</h3>
+<p>Participation in the FIT India Freedom Run 2.0.</p>
+</div>
+</div>
+
+<div class="card achievement reveal">
+<img src="/public/assets/certificate-vigilance.jpg" alt="Vigilance Certificate">
+<div class="achievementInfo">
+<h3>Vigilance Certificate</h3>
+<p>Certificate of Commitment from the Central Vigilance Commission.</p>
+</div>
+</div>
+
+<div class="card achievement reveal">
+<img src="/public/assets/certificate-fit-india-youth.jpg" alt="FIT India Certificate">
+<div class="achievementInfo">
+<h3>FIT India Recognition</h3>
+<p>Certificate of Recognition from FIT India.</p>
+</div>
+</div>
+
+<div class="card reveal">
+<div class="achievementInfo">
+<h3>KFA ROYAL TROPHY WINNERS 2026</h3>
+<p>New Green Star Eniyadi — Royal Trophy Winners 2026.</p>
+</div>
+</div>
+
+<div class="card reveal">
+<div class="achievementInfo">
+<h3>KFA LEAGUE 2015-16 RUNNER UP</h3>
+<p>New Green Star Eniyadi — KFA League Runner Up.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="members">
+<h2 class="sectionTitle reveal">Our Members</h2>
+
+<div id="memberCount" class="reveal" style="text-align:center;margin-bottom:30px;font-size:20px;font-weight:800">
+Loading members...
+</div>
+
+<div id="membersGrid" class="membersGrid"></div>
+</section>
+
+<section id="budget">
+<h2 class="sectionTitle reveal">Club Budget</h2>
+
+<div class="aboutBox reveal">
+<div id="publicBudgetTotal" class="budgetTotal">₹0</div>
+<p>
+This section shows the club's recorded program budgets and expenses.
+</p>
+
+<div id="publicBudgets" style="margin-top:25px"></div>
+</div>
+</section>
+
+<section id="about">
+<h2 class="sectionTitle reveal">About Us</h2>
+
+<div class="aboutBox reveal">
+<p>
+New Green Star Eniyadi is a community-based arts and sports club focused on
+sports, cultural activities, friendship and community development.
+</p>
+
+<p style="margin-top:15px">
+Reg No: 395/09<br>
+Society, NYK, KSYWB & FIT India affiliated<br>
+Bandhadka Post, Chengala (via), Kasaragod Dt 671 541
+</p>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="sectionTitle reveal">Contact</h2>
+
+<div class="contactGrid">
+<div class="contactBox reveal">
+<h3>Club Address</h3>
+<p style="margin-top:10px">
+Bandhadka Post<br>
+Chengala (via)<br>
+Kasaragod Dt 671 541
+</p>
+</div>
+
+<div class="contactBox reveal">
+<h3>Email</h3>
+<p style="margin-top:10px">
+newgreenstareniaydi@gmail.com
+</p>
+</div>
+</div>
+</section>
+
+</main>
+
+<section id="adminPage" class="adminPage">
+
+<div class="adminHeader">
+<h2>Admin Dashboard</h2>
+
+<div class="adminActions">
+<button class="secondary" onclick="downloadStatements()">Download Statements</button>
+<button class="secondary" onclick="logoutAdmin()">Logout</button>
+</div>
+</div>
+
+<div class="stats">
+<div class="stat">
+<small>Total Members</small>
+<strong id="statMembers">0</strong>
+</div>
+
+<div class="stat">
+<small>Monthly Fee</small>
+<strong id="statFee">₹0</strong>
+</div>
+
+<div class="stat">
+<small>Paid This Month</small>
+<strong id="statPaid">₹0</strong>
+</div>
+
+<div class="stat">
+<small>Pending This Month</small>
+<strong id="statPending">₹0</strong>
+</div>
+</div>
+
 <div class="adminGrid">
-<div class="panel"><h2>Add a member</h2><form onsubmit="addMember(event)"><div class="group"><label>Full name</label><input id="name" class="input" required placeholder="Member name"></div><div class="group"><label>Role / category</label><input id="role" class="input" required placeholder="Member, Captain, etc."></div><div class="group"><label>Mobile number</label><input id="mobile" class="input" required type="tel" inputmode="tel" placeholder="e.g. 9876543210"></div><div class="group"><label>Email address</label><input id="email" class="input" required type="email" placeholder="member@example.com"></div><button class="btn primary">Add member</button></form></div>
-<div class="panel"><h2>Monthly subscription</h2><div class="subBar"><div><label class="monthLabel">Payment month</label><input id="paymentMonth" class="input monthInput" type="month" onchange="loadAdminData()"></div><div class="monthInfo" id="monthInfo">Monthly fee</div></div><div class="tableWrap"><table><thead><tr><th>Name</th><th>Mobile</th><th>Email</th><th>Payment</th><th>Action</th></tr></thead><tbody id="paymentTable"></tbody></table></div></div>
-</div>
-<div class="twoCols">
-<div class="panel adminSection"><h2>Fee settings</h2><form onsubmit="saveFee(event)"><div class="group"><label>Monthly subscription fee (₹)</label><input id="monthlyFee" class="input" type="number" min="0" step="0.01" required></div><button class="btn primary">Save fee</button></form></div>
-<div class="panel adminSection"><h2>Achievements</h2><form onsubmit="addAchievement(event)"><div class="panelGrid"><div><label>Year / period</label><input id="achievementYear" class="input" required placeholder="2026"></div><div><label>Title</label><input id="achievementTitle" class="input" required placeholder="Achievement title"></div></div><label>Description</label><textarea id="achievementDescription" class="textarea" required placeholder="What the club achieved"></textarea><button class="btn primary">Add achievement</button></form><div id="adminAchievements" class="tableWrap" style="margin-top:15px"></div></div>
-</div>
-<div class="twoCols">
-<div class="panel adminSection"><h2>Budget tracker</h2><form onsubmit="addBudget(event)"><div class="group"><label>Program name</label><input id="programName" class="input" required placeholder="Program / event"></div><div class="panelGrid"><div><label>Date</label><input id="eventDate" class="input" type="date"></div><div><label>Cost (₹)</label><input id="programCost" class="input" type="number" min="0" step="0.01" required></div></div><div class="group"><label>Club received (₹)</label><input id="programReceived" class="input" type="number" min="0" step="0.01" required value="0"></div><div class="group"><label>Notes</label><textarea id="programNotes" class="textarea" placeholder="Sponsor, donation, details…"></textarea></div><button class="btn primary">Add program</button></form></div>
-<div class="panel adminSection"><h2>Budget records</h2><div class="tableWrap"><table><thead><tr><th>Program</th><th>Cost</th><th>Received</th><th>Balance</th><th>Action</th></tr></thead><tbody id="budgetTable"></tbody></table></div></div>
-</div>
-<div class="panel adminSection waPanel"><span class="waBadge"><span class="waDot"></span> WhatsApp Business</span><h2>Send WhatsApp message</h2><form onsubmit="sendMessage(event)"><div class="panelGrid"><div><label>Audience</label><select id="messageAudience" class="select" onchange="updateAudience()"><option value="all">All members</option><option value="paid">Paid members</option><option value="pending">Pending members</option><option value="selected">Selected members</option></select></div><div><label>Message type</label><select class="select" disabled><option>Text message</option></select></div></div><div id="selectedMembers" class="hidden"><label>Select members</label><div id="memberChecks" class="panelGrid" style="margin-bottom:10px"></div></div><div class="group"><label>Message</label><textarea id="messageBody" class="textarea" required maxlength="4096" placeholder="Write your WhatsApp message…"></textarea></div><button id="sendButton" class="btn primary waButton">Send on WhatsApp</button><div id="messageResult" class="messageResult"></div><p class="waHint">Messages are sent through the club's WhatsApp Business Cloud API. Member mobile numbers must include a valid WhatsApp number.</p></form></div>
-</div></main></div>
 
-<div id="loginModal" class="modal"><div class="modalCard"><h2>Club Admin</h2><p>Enter the admin password to manage the club records.</p><label>Password</label><input id="password" class="input" type="password" onkeydown="if(event.key==='Enter')login()" placeholder="Admin password"><div id="loginError" class="error">Incorrect password.</div><div class="modalActions"><button class="btn" onclick="closeLogin()">Cancel</button><button class="btn primary" onclick="login()">Enter admin</button></div></div></div>
-<div id="toast" class="toast"></div>
+<div class="adminCard">
+<h3>Add Member</h3>
+
+<form id="memberForm">
+<div class="formGrid">
+
+<input id="memberName" placeholder="Full name" required>
+
+<input id="memberRole" placeholder="Role / category">
+
+<input id="memberMobile" placeholder="Mobile number">
+
+<input id="memberEmail" type="email" placeholder="Email">
+
+<div class="full">
+<button class="primary" type="submit">Add Member</button>
+</div>
+
+</div>
+</form>
+</div>
+
+<div class="adminCard">
+<h3>Monthly Subscription</h3>
+
+<div class="formGrid">
+<select id="paymentMember"></select>
+
+<input id="paymentMonth" type="month">
+
+<div>
+<button class="primary" onclick="markPayment('paid')">Mark Paid</button>
+</div>
+
+<div>
+<button class="secondary" onclick="markPayment('pending')">Mark Pending</button>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="adminCard">
+<h3>Members</h3>
+
+<div class="tableWrap">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Role</th>
+<th>Mobile</th>
+<th>Email</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="adminMembers"></tbody>
+</table>
+</div>
+</div>
+
+<div class="adminCard">
+<h3>Payments</h3>
+
+<div class="tableWrap">
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Month</th>
+<th>Status</th>
+<th>Amount</th>
+</tr>
+</thead>
+
+<tbody id="adminPayments"></tbody>
+</table>
+</div>
+</div>
+
+<div class="adminCard">
+<h3>Monthly Fee</h3>
+
+<div class="formGrid">
+<input id="monthlyFee" type="number" min="0" placeholder="Monthly fee">
+
+<div>
+<button class="primary" onclick="saveFee()">Save Fee</button>
+</div>
+</div>
+</div>
+
+<div class="adminCard">
+<h3>Achievements</h3>
+
+<form id="achievementForm">
+<div class="formGrid">
+<input id="achievementTitle" placeholder="Achievement title" required>
+
+<input id="achievementDate" type="date">
+
+<textarea id="achievementDescription" class="full" placeholder="Description"></textarea>
+
+<div class="full">
+<button class="primary" type="submit">Add Achievement</button>
+</div>
+</div>
+</form>
+
+<div id="adminAchievements" style="margin-top:25px"></div>
+</div>
+
+<div class="adminCard">
+<h3>Budget Tracker</h3>
+
+<form id="budgetForm">
+<div class="formGrid">
+
+<input id="budgetProgram" placeholder="Program name" required>
+
+<input id="budgetCost" type="number" min="0" placeholder="Program cost">
+
+<input id="budgetReceived" type="number" min="0" placeholder="Amount club got">
+
+<input id="budgetDate" type="date">
+
+<textarea id="budgetNotes" class="full" placeholder="Notes"></textarea>
+
+<div class="full">
+<button class="primary" type="submit">Add Budget</button>
+</div>
+
+</div>
+</form>
+
+<div id="adminBudgets" style="margin-top:25px"></div>
+</div>
+
+<div class="adminCard whatsappBox">
+<h3>WhatsApp Message</h3>
+
+<p>
+Send a message to the club members through WhatsApp.
+</p>
+
+<textarea id="whatsappMessage" placeholder="Write your message"></textarea>
+
+<div style="margin-top:12px">
+<button class="primary" onclick="sendWhatsApp()">Send WhatsApp Message</button>
+</div>
+</div>
+
+</section>
+
+<div id="loginModal" class="modal">
+<div class="modalBox">
+
+<h3>Admin Login</h3>
+
+<input id="adminPassword" type="password" placeholder="Admin password">
+
+<div class="modalButtons">
+<button class="secondary" onclick="closeLogin()">Cancel</button>
+<button class="primary" onclick="loginAdmin()">Login</button>
+</div>
+
+</div>
+</div>
+
+<footer>
+New Green Star Eniyadi © 2026
+</footer>
+
 <script>
-let publicData={members:[],payments:[],achievements:[],budgets:[],monthlyFee:100,month:''};
-let adminData={members:[],payments:[],achievements:[],budgets:[],monthlyFee:100};
-const esc=s=>{const d=document.createElement('div');d.textContent=s??'';return d.innerHTML};
-const initials=n=>String(n||'').split(/\s+/).filter(Boolean).map(x=>x[0]).slice(0,2).join('').toUpperCase();
-const money=n=>new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:2}).format(Number(n)||0);
-const currentMonth=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`};
-const api=async(path,options={})=>{const r=await fetch(path,{headers:{'Content-Type':'application/json',...(options.headers||{})},...options});const data=await r.json().catch(()=>({}));if(!r.ok)throw new Error(data.error||'Request failed');return data};
-function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)}
-async function loadPublic(){try{publicData=await api('/api/public');renderPublic()}catch(e){document.getElementById('memberGrid').innerHTML=`<div class="empty">Club data could not be loaded. ${esc(e.message)}</div>`}}
-function renderPublic(){
-const paidIds=new Set(publicData.payments.map(x=>x.member_id));
-document.getElementById('heroMembers').textContent=publicData.members.length;
-document.getElementById('heroPaid').textContent=publicData.payments.length;
-document.getElementById('heroAchievements').textContent=publicData.achievements.length;
-document.getElementById('latestAchievement').textContent=publicData.achievements[0]?`${publicData.achievements[0].title} · ${publicData.achievements[0].year}`:'No achievements added yet.';
-const q=(document.getElementById('search').value||'').toLowerCase();const members=publicData.members.filter(m=>(m.name+' '+m.role).toLowerCase().includes(q));document.getElementById('memberGrid').innerHTML=members.length?members.map(m=>`<article class="member"><div class="avatar">${initials(m.name)}</div><div><h3>${esc(m.name)}</h3><p>${esc(m.role)}</p></div><span class="status ${paidIds.has(m.id)?'paid':'pending'}">${paidIds.has(m.id)?'PAID':'PENDING'}</span></article>`).join(''):'<div class="empty">No members found.</div>';
-document.getElementById('achievementGrid').innerHTML=publicData.achievements.length?publicData.achievements.map(a=>`<article class="achievement"><div class="year">${esc(a.year)}</div><h3>${esc(a.title)}</h3><p>${esc(a.description)}</p></article>`).join(''):'<div class="empty">No achievements added yet.</div>';
-const cost=publicData.budgets.reduce((s,x)=>s+Number(x.cost||0),0),received=publicData.budgets.reduce((s,x)=>s+Number(x.received||0),0);document.getElementById('publicCost').textContent=money(cost);document.getElementById('publicReceived').textContent=money(received);document.getElementById('publicBalance').textContent=money(received-cost);
-document.getElementById('budgetPublic').innerHTML=publicData.budgets.length?publicData.budgets.map(x=>`<div class="item"><h3>${esc(x.program_name)}</h3><p>${x.event_date?esc(x.event_date):'Date not set'}</p><p>Cost: <span class="money">${money(x.cost)}</span></p><p>Received: <span class="money">${money(x.received)}</span></p>${x.notes?`<p>${esc(x.notes)}</p>`:''}</div>`).join(''):'<div class="empty">No program budget records have been added.</div>';
+let members=[];
+let payments=[];
+let budgets=[];
+let achievements=[];
+let settings={monthly_fee:100};
+
+const $=id=>document.getElementById(id);
+
+async function api(url,options={}){
+const res=await fetch(url,{
+headers:{
+"Content-Type":"application/json",
+...(options.headers||{})
+},
+...options
+});
+
+const data=await res.json().catch(()=>({}));
+
+if(!res.ok){
+throw new Error(data.error||"Request failed")
 }
-function renderPublicMembers(){if(publicData.members)renderPublic()}
-function toggleNav(){document.getElementById('navWrap').classList.toggle('open')}
-function openLogin(e){e.preventDefault();document.getElementById('loginModal').classList.add('open');document.getElementById('password').focus()}
-function closeLogin(){document.getElementById('loginModal').classList.remove('open');document.getElementById('password').value='';document.getElementById('loginError').style.display='none'}
-async function login(){try{await api('/api/auth-login',{method:'POST',body:JSON.stringify({password:document.getElementById('password').value})});closeLogin();document.getElementById('publicPage').classList.add('hidden');document.getElementById('adminPage').classList.add('active');document.getElementById('paymentMonth').value=currentMonth();await loadAdminData();window.scrollTo(0,0)}catch(e){document.getElementById('loginError').textContent=e.message;document.getElementById('loginError').style.display='block'}}
-async function exitAdmin(){try{await api('/api/auth-logout',{method:'POST'})}catch{}document.getElementById('adminPage').classList.remove('active');document.getElementById('publicPage').classList.remove('hidden');await loadPublic();window.scrollTo(0,0)}
-async function loadAdminData(){try{const month=document.getElementById('paymentMonth').value||currentMonth();document.getElementById('paymentMonth').value=month;const [m,p,a,b,s]=await Promise.all([api('/api/members'),api(`/api/payments?month=${encodeURIComponent(month)}`),api('/api/achievements'),api('/api/budgets'),api('/api/settings')]);adminData={members:m.members,payments:p.payments,achievements:a.achievements,budgets:b.budgets,monthlyFee:Number(s.settings.monthly_fee||100)};renderAdmin()}catch(e){toast(e.message)}}
-function renderAdmin(){const month=document.getElementById('paymentMonth').value;const paidIds=new Set(adminData.payments.map(x=>x.member_id));document.getElementById('total').textContent=adminData.members.length;document.getElementById('paid').textContent=money(adminData.payments.reduce((s,x)=>s+Number(x.amount||0),0));document.getElementById('pending').textContent=Math.max(0,adminData.members.length-adminData.payments.length);document.getElementById('feeDisplay').textContent=money(adminData.monthlyFee);document.getElementById('monthlyFee').value=adminData.monthlyFee;document.getElementById('monthInfo').textContent=`${money(adminData.monthlyFee)} per member · ${month}`;document.getElementById('paymentTable').innerHTML=adminData.members.length?adminData.members.map(m=>{const paid=paidIds.has(m.id);return `<tr><td><b>${esc(m.name)}</b><br><span style="font-size:9px;color:var(--muted)">${esc(m.role)}</span></td><td>${esc(m.mobile)}</td><td>${esc(m.email)}</td><td><span class="status ${paid?'paid':'pending'}">${paid?'PAID':'PENDING'}</span></td><td><button class="action" onclick="togglePayment('${m.id}',${!paid})">${paid?'Mark pending':'Mark paid'}</button><button class="action delete" onclick="removeMember('${m.id}')">Delete</button></td></tr>`}).join(''):'<tr><td colspan="5">No members yet.</td></tr>';document.getElementById('adminAchievements').innerHTML=adminData.achievements.map(a=>`<div style="display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:11px"><span><b>${esc(a.title)}</b><br><span style="color:var(--muted)">${esc(a.year)} · ${esc(a.description)}</span></span><button class="action delete" onclick="removeAchievement('${a.id}')">Delete</button></div>`).join('');document.getElementById('budgetTable').innerHTML=adminData.budgets.length?adminData.budgets.map(x=>`<tr><td><b>${esc(x.program_name)}</b><br><span style="font-size:9px;color:var(--muted)">${esc(x.event_date||'')}</span></td><td>${money(x.cost)}</td><td>${money(x.received)}</td><td>${money(Number(x.received)-Number(x.cost))}</td><td><button class="action delete" onclick="removeBudget('${x.id}')">Delete</button></td></tr>`).join(''):'<tr><td colspan="5">No budget records yet.</td></tr>';renderMemberChecks()}
-async function addMember(e){e.preventDefault();try{await api('/api/members',{method:'POST',body:JSON.stringify({name:document.getElementById('name').value,role:document.getElementById('role').value,mobile:document.getElementById('mobile').value,email:document.getElementById('email').value})});e.target.reset();toast('Member added');await loadAdminData();await loadPublic()}catch(err){toast(err.message)}}
-async function togglePayment(id,paid){try{await api('/api/payments',{method:'PUT',body:JSON.stringify({memberId:id,month:document.getElementById('paymentMonth').value,paid,amount:adminData.monthlyFee})});toast(paid?'Payment marked as paid':'Payment marked as pending');await loadAdminData();await loadPublic()}catch(e){toast(e.message)}}
-async function removeMember(id){if(!confirm('Remove this member from the active member list?'))return;try{await api(`/api/members?id=${encodeURIComponent(id)}`,{method:'DELETE'});toast('Member removed');await loadAdminData();await loadPublic()}catch(e){toast(e.message)}}
-async function saveFee(e){e.preventDefault();try{const d=await api('/api/settings',{method:'PUT',body:JSON.stringify({monthlyFee:Number(document.getElementById('monthlyFee').value)})});adminData.monthlyFee=Number(d.monthlyFee);toast('Monthly fee saved');renderAdmin();await loadPublic()}catch(err){toast(err.message)}}
-async function addAchievement(e){e.preventDefault();try{await api('/api/achievements',{method:'POST',body:JSON.stringify({year:document.getElementById('achievementYear').value,title:document.getElementById('achievementTitle').value,description:document.getElementById('achievementDescription').value})});e.target.reset();toast('Achievement added');await loadAdminData();await loadPublic()}catch(err){toast(err.message)}}
-async function removeAchievement(id){if(!confirm('Delete this achievement?'))return;try{await api(`/api/achievements?id=${encodeURIComponent(id)}`,{method:'DELETE'});toast('Achievement deleted');await loadAdminData();await loadPublic()}catch(e){toast(e.message)}}
-async function addBudget(e){e.preventDefault();try{await api('/api/budgets',{method:'POST',body:JSON.stringify({programName:document.getElementById('programName').value,eventDate:document.getElementById('eventDate').value,cost:Number(document.getElementById('programCost').value),received:Number(document.getElementById('programReceived').value),notes:document.getElementById('programNotes').value})});e.target.reset();document.getElementById('programReceived').value='0';toast('Budget record added');await loadAdminData();await loadPublic()}catch(err){toast(err.message)}}
-async function removeBudget(id){if(!confirm('Delete this budget record?'))return;try{await api(`/api/budgets?id=${encodeURIComponent(id)}`,{method:'DELETE'});toast('Budget record deleted');await loadAdminData();await loadPublic()}catch(e){toast(e.message)}}
-function renderMemberChecks(){const box=document.getElementById('memberChecks');box.innerHTML=adminData.members.map(m=>`<label style="font-size:11px;font-weight:500;display:flex;gap:7px;align-items:center"><input type="checkbox" value="${m.id}"> ${esc(m.name)}</label>`).join('')}
-function updateAudience(){document.getElementById('selectedMembers').classList.toggle('hidden',document.getElementById('messageAudience').value!=='selected')}
-async function sendMessage(e){e.preventDefault();const audience=document.getElementById('messageAudience').value;const ids=[...document.querySelectorAll('#memberChecks input:checked')].map(x=>x.value);if(audience==='selected'&&!ids.length){toast('Select at least one member');return}const button=document.getElementById('sendButton'),result=document.getElementById('messageResult');button.disabled=true;result.classList.remove('dangerText');result.textContent='Sending…';try{const d=await api('/api/messages-whatsapp',{method:'POST',body:JSON.stringify({body:document.getElementById('messageBody').value,audience,memberIds:ids,month:document.getElementById('paymentMonth').value})});result.textContent=`Sent successfully to ${d.recipients} member${d.recipients===1?'':'s'}.`;document.getElementById('messageBody').value='';toast('WhatsApp message sent');}catch(err){result.textContent=err.message;result.classList.add('dangerText')}finally{button.disabled=false}}
-function csv(rows){return rows.map(r=>r.map(v=>`"${String(v??'').replace(/"/g,'""')}"`).join(',')).join('\n')}
-function download(name,text){const blob=new Blob([text],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();URL.revokeObjectURL(url)}
-function downloadStatement(){const month=document.getElementById('paymentMonth').value,paidIds=new Set(adminData.payments.map(x=>x.member_id)),rows=[['Member','Role','Mobile','Email','Month','Status','Amount']];adminData.members.forEach(m=>rows.push([m.name,m.role,m.mobile,m.email,month,paidIds.has(m.id)?'PAID':'PENDING',paidIds.has(m.id)?adminData.monthlyFee:0]));download(`new-green-star-statement-${month}.csv`,csv(rows))}
-function downloadFullReport(){const rows=[['NEW GREEN STAR ENIYADI ARTS & SPORTS CLUB'],['Reg no','395/09'],[],['Members'],['Name','Role','Mobile','Email'],...adminData.members.map(m=>[m.name,m.role,m.mobile,m.email]),[],['Achievements'],['Year','Title','Description'],...adminData.achievements.map(a=>[a.year,a.title,a.description]),[],['Budgets'],['Program','Date','Cost','Received','Balance','Notes'],...adminData.budgets.map(b=>[b.program_name,b.event_date,b.cost,b.received,Number(b.received)-Number(b.cost),b.notes])];download(`new-green-star-full-report-${new Date().toISOString().slice(0,10)}.csv`,csv(rows))}
-function startSite(){const splash=document.getElementById('siteSplash');const hideSplash=()=>splash.classList.add('hide');setTimeout(hideSplash,2700);const revealTargets=[...document.querySelectorAll('section:not(.hero),footer')];revealTargets.forEach(el=>el.classList.add('reveal'));const animateChildren=el=>{const groups=[...el.querySelectorAll('.achievement,.cert,.member,.financeCard,.budgetPublic .item,.value,.details')];groups.forEach((item,i)=>{item.style.animationDelay=`${Math.min(i,7)*.08}s`;item.classList.add('animateIn')});const heads=el.querySelectorAll('.sectionHead,.aboutGrid,.contactBox');heads.forEach(x=>x.classList.add('is-visible'))};if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');animateChildren(entry.target);observer.unobserve(entry.target)}}),{threshold:.08,rootMargin:'0px 0px -7% 0px'});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el))}else{document.querySelectorAll('.reveal').forEach(el=>{el.classList.add('is-visible');animateChildren(el)})}loadPublic()}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',startSite);else startSite();
+
+return data
+}
+
+function openLogin(e){
+if(e)e.preventDefault();
+$("loginModal").classList.add("active");
+$("adminPassword").focus()
+}
+
+function closeLogin(){
+$("loginModal").classList.remove("active");
+$("adminPassword").value=""
+}
+
+async function loginAdmin(){
+try{
+await api("/api/auth-login",{
+method:"POST",
+body:JSON.stringify({
+password:$("adminPassword").value
+})
+});
+
+closeLogin();
+await showAdmin()
+}catch(e){
+alert(e.message)
+}
+}
+
+async function logoutAdmin(){
+await api("/api/auth-logout",{
+method:"POST"
+});
+
+$("adminPage").classList.remove("active");
+$("publicPage").style.display="";
+window.scrollTo({
+top:0,
+behavior:"smooth"
+})
+}
+
+async function showAdmin(){
+$("publicPage").style.display="none";
+$("adminPage").classList.add("active");
+window.scrollTo({top:0});
+
+await loadAdmin()
+}
+
+async function loadPublic(){
+try{
+const data=await api("/api/public");
+
+members=data.members||[];
+budgets=data.budgets||[];
+achievements=data.achievements||[];
+settings=data.settings||settings;
+
+renderPublicMembers();
+renderPublicBudgets();
+}catch(e){
+console.error(e)
+}
+}
+
+function getInitials(name){
+return name
+.split(" ")
+.filter(Boolean)
+.slice(0,2)
+.map(x=>x[0])
+.join("")
+.toUpperCase()
+}
+
+function renderPublicMembers(){
+$("memberCount").textContent=
+`${members.length} ${members.length===1?"member":"members"} in our club`;
+
+$("membersGrid").innerHTML=members.map(member=>`
+<div class="memberCard reveal">
+<div class="memberAvatar">
+${member.photo_url
+?`<img src="${member.photo_url}" alt="${escapeHtml(member.name)}">`
+:`${getInitials(member.name||"Member")}`}
+</div>
+
+<h3>${escapeHtml(member.name||"")}</h3>
+
+<div class="memberRole">
+${escapeHtml(member.role||"Member")}
+</div>
+
+<div class="memberContact">
+${escapeHtml(member.mobile||"")}
+${member.email?`<br>${escapeHtml(member.email)}`:""}
+</div>
+</div>
+`).join("");
+
+observeReveals()
+}
+
+function renderPublicBudgets(){
+let total=0;
+
+budgets.forEach(b=>{
+total+=Number(b.cost||0)
+});
+
+$("publicBudgetTotal").textContent=
+"₹"+total.toLocaleString("en-IN");
+
+$("publicBudgets").innerHTML=budgets.map(b=>`
+<div style="padding:18px 0;border-bottom:1px solid #333">
+<h3>${escapeHtml(b.program_name||"Program")}</h3>
+<p style="margin-top:7px">
+Cost: ₹${Number(b.cost||0).toLocaleString("en-IN")}
+<br>
+Club received: ₹${Number(b.amount_received||0).toLocaleString("en-IN")}
+${b.date?`<br>Date: ${escapeHtml(b.date)}`:""}
+${b.notes?`<br>${escapeHtml(b.notes)}`:""}
+</p>
+</div>
+`).join("");
+}
+
+async function loadAdmin(){
+try{
+const data=await api("/api/public");
+
+members=data.members||[];
+payments=data.payments||[];
+budgets=data.budgets||[];
+achievements=data.achievements||[];
+settings=data.settings||settings;
+
+$("statMembers").textContent=members.length;
+$("statFee").textContent="₹"+Number(settings.monthly_fee||0).toLocaleString("en-IN");
+
+const month=new Date().toISOString().slice(0,7);
+
+const monthPayments=payments.filter(x=>x.month===month);
+
+const paid=monthPayments.filter(x=>x.status==="paid").reduce((a,b)=>a+Number(b.amount||0),0);
+
+const pending=members.length*Number(settings.monthly_fee||0)-paid;
+
+$("statPaid").textContent="₹"+paid.toLocaleString("en-IN");
+$("statPending").textContent="₹"+Math.max(0,pending).toLocaleString("en-IN");
+
+renderAdminMembers();
+renderPayments();
+renderAdminBudgets();
+renderAdminAchievements();
+
+$("monthlyFee").value=settings.monthly_fee||100;
+
+populatePaymentMembers();
+
+}catch(e){
+if(e.message==="Unauthorized"){
+$("adminPage").classList.remove("active");
+$("publicPage").style.display="";
+}else{
+alert(e.message)
+}
+}
+}
+
+function populatePaymentMembers(){
+$("paymentMember").innerHTML=members.map(m=>
+`<option value="${m.id}">${escapeHtml(m.name)}</option>`
+).join("");
+
+if(!$("paymentMonth").value){
+$("paymentMonth").value=new Date().toISOString().slice(0,7)
+}
+}
+
+function renderAdminMembers(){
+$("adminMembers").innerHTML=members.map(m=>`
+<tr>
+<td>${escapeHtml(m.name||"")}</td>
+<td>${escapeHtml(m.role||"")}</td>
+<td>${escapeHtml(m.mobile||"")}</td>
+<td>${escapeHtml(m.email||"")}</td>
+<td>
+<button class="danger" onclick="deleteMember('${m.id}')">
+Delete
+</button>
+</td>
+</tr>
+`).join("");
+}
+
+function renderPayments(){
+$("adminPayments").innerHTML=payments.map(p=>`
+<tr>
+<td>${escapeHtml(p.member_name||"")}</td>
+<td>${escapeHtml(p.month||"")}</td>
+<td class="${p.status==="paid"?"paid":"pending"}">
+${escapeHtml(p.status||"")}
+</td>
+<td>₹${Number(p.amount||0).toLocaleString("en-IN")}</td>
+</tr>
+`).join("");
+}
+
+function renderAdminBudgets(){
+$("adminBudgets").innerHTML=budgets.map(b=>`
+<div style="padding:15px 0;border-bottom:1px solid #eee">
+<strong>${escapeHtml(b.program_name||"Program")}</strong>
+<div style="margin-top:6px">
+Cost: ₹${Number(b.cost||0).toLocaleString("en-IN")}
+<br>
+Received: ₹${Number(b.amount_received||0).toLocaleString("en-IN")}
+${b.date?`<br>Date: ${escapeHtml(b.date)}`:""}
+${b.notes?`<br>Notes: ${escapeHtml(b.notes)}`:""}
+</div>
+</div>
+`).join("");
+}
+
+function renderAdminAchievements(){
+$("adminAchievements").innerHTML=achievements.map(a=>`
+<div style="padding:15px 0;border-bottom:1px solid #eee">
+<strong>${escapeHtml(a.title||"")}</strong>
+${a.date?`<br>${escapeHtml(a.date)}`:""}
+${a.description?`<br>${escapeHtml(a.description)}`:""}
+</div>
+`).join("");
+}
+
+$("memberForm").addEventListener("submit",async e=>{
+e.preventDefault();
+
+try{
+await api("/api/members",{
+method:"POST",
+body:JSON.stringify({
+name:$("memberName").value.trim(),
+role:$("memberRole").value.trim(),
+mobile:$("memberMobile").value.trim(),
+email:$("memberEmail").value.trim()
+})
+});
+
+e.target.reset();
+
+await loadAdmin();
+await loadPublic();
+
+alert("Member added");
+}catch(err){
+alert(err.message)
+}
+});
+
+async function deleteMember(id){
+if(!confirm("Delete this member?"))return;
+
+try{
+await api("/api/members?id="+encodeURIComponent(id),{
+method:"DELETE"
+});
+
+await loadAdmin();
+await loadPublic();
+}catch(e){
+alert(e.message)
+}
+}
+
+async function markPayment(status){
+const memberId=$("paymentMember").value;
+const month=$("paymentMonth").value;
+
+if(!memberId||!month){
+alert("Select member and month");
+return
+}
+
+try{
+await api("/api/payments",{
+method:"POST",
+body:JSON.stringify({
+member_id:memberId,
+month,
+status,
+amount:Number(settings.monthly_fee||0)
+})
+});
+
+await loadAdmin();
+
+alert(status==="paid"?"Payment marked as paid":"Payment marked as pending");
+}catch(e){
+alert(e.message)
+}
+}
+
+async function saveFee(){
+const fee=Number($("monthlyFee").value);
+
+if(fee<0){
+alert("Invalid fee");
+return
+}
+
+try{
+await api("/api/settings",{
+method:"POST",
+body:JSON.stringify({
+monthly_fee:fee
+})
+});
+
+await loadAdmin();
+await loadPublic();
+
+alert("Monthly fee saved");
+}catch(e){
+alert(e.message)
+}
+}
+
+$("achievementForm").addEventListener("submit",async e=>{
+e.preventDefault();
+
+try{
+await api("/api/achievements",{
+method:"POST",
+body:JSON.stringify({
+title:$("achievementTitle").value.trim(),
+date:$("achievementDate").value,
+description:$("achievementDescription").value.trim()
+})
+});
+
+e.target.reset();
+
+await loadAdmin();
+await loadPublic();
+
+alert("Achievement added");
+}catch(err){
+alert(err.message)
+}
+});
+
+$("budgetForm").addEventListener("submit",async e=>{
+e.preventDefault();
+
+try{
+await api("/api/budgets",{
+method:"POST",
+body:JSON.stringify({
+program_name:$("budgetProgram").value.trim(),
+cost:Number($("budgetCost").value||0),
+amount_received:Number($("budgetReceived").value||0),
+date:$("budgetDate").value,
+notes:$("budgetNotes").value.trim()
+})
+});
+
+e.target.reset();
+
+await loadAdmin();
+await loadPublic();
+
+alert("Budget added");
+}catch(err){
+alert(err.message)
+}
+});
+
+async function sendWhatsApp(){
+const message=$("whatsappMessage").value.trim();
+
+if(!message){
+alert("Write a message first");
+return
+}
+
+try{
+const result=await api("/api/messages-whatsapp",{
+method:"POST",
+body:JSON.stringify({
+message
+})
+});
+
+alert(result.message||"WhatsApp message sent");
+$("whatsappMessage").value="";
+}catch(e){
+alert(e.message)
+}
+}
+
+async function downloadStatements(){
+try{
+const response=await fetch("/api/payments?download=1");
+
+if(!response.ok){
+throw new Error("Unable to download statements")
+}
+
+const blob=await response.blob();
+
+const url=URL.createObjectURL(blob);
+const a=document.createElement("a");
+
+a.href=url;
+a.download="new-green-star-statements.csv";
+
+document.body.appendChild(a);
+a.click();
+a.remove();
+
+URL.revokeObjectURL(url);
+}catch(e){
+alert(e.message)
+}
+}
+
+function escapeHtml(value){
+return String(value??"")
+.replaceAll("&","&amp;")
+.replaceAll("<","&lt;")
+.replaceAll(">","&gt;")
+.replaceAll('"',"&quot;")
+.replaceAll("'","&#039;")
+}
+
+function observeReveals(){
+const items=document.querySelectorAll(".reveal:not(.show)");
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+observer.unobserve(entry.target)
+}
+})
+},{
+threshold:.12
+});
+
+items.forEach(item=>observer.observe(item))
+}
+
+async function startSite(){
+setTimeout(()=>{
+$("siteSplash").classList.add("hide")
+},2200);
+
+observeReveals();
+await loadPublic();
+}
+
+startSite();
 </script>
+
 </body>
 </html>
