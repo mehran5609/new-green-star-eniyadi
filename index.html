@@ -21,7 +21,256 @@ footer{background:#09391e;color:#aebeb3;padding:25px 0;font-size:11px}.foot{disp
 .hidden{display:none!important}.toast{position:fixed;right:18px;bottom:18px;z-index:200;background:#123b25;color:#fff;padding:12px 15px;border-radius:8px;font-size:12px;box-shadow:0 10px 30px #0003;opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:translateY(0)}.modal{position:fixed;inset:0;background:#07150bb3;display:none;place-items:center;padding:20px;z-index:100}.modal.open{display:grid}.modalCard{background:#fff;width:min(420px,100%);padding:27px;border-radius:12px}.modalCard h2{font-size:23px}.modalCard p{font-size:12px;color:var(--muted);margin:6px 0 18px}.modalCard label,.group label{font-size:10px;font-weight:800;display:block;margin-bottom:4px}.input,.select,.textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;margin-bottom:11px;outline:none;background:#fff}.textarea{min-height:120px;resize:vertical}.input:focus,.select:focus,.textarea:focus{border-color:var(--g)}.error{display:none;color:#b83232;font-size:11px;margin-bottom:10px}.modalActions{display:flex;justify-content:flex-end;gap:8px}.loading{padding:30px;text-align:center;color:var(--muted);font-size:12px}.empty{padding:25px;color:var(--muted);font-size:12px;text-align:center;border:1px dashed var(--line);border-radius:8px}
 .adminPage{display:none;min-height:100vh;background:#f3f7f4}.adminPage.active{display:block}.publicPage.hidden{display:none}.adminTop{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30}.adminNav{min-height:68px;display:flex;align-items:center;justify-content:space-between}.adminNav h1{font-size:20px}.adminNav h1 span{color:var(--g)}.adminMain{padding:38px 0}.adminStats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:15px}.adminStat small{color:var(--muted);font-size:10px}.adminStat b{display:block;color:var(--gd);font-size:23px}.adminGrid{display:grid;grid-template-columns:340px 1fr;gap:15px;margin-bottom:15px}.panel h2{font-size:15px;margin-bottom:15px}.group{margin-bottom:5px}.panelGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.tableWrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:620px}th,td{text-align:left;border-bottom:1px solid var(--line);padding:10px 7px;font-size:11px}th{font-size:9px;color:var(--muted);text-transform:uppercase}.action{border:0;border-radius:4px;padding:6px 8px;background:var(--gl);color:var(--gd);font-size:9px;font-weight:800;margin-right:4px}.action.delete{background:#faeaea;color:#a42d2d}.subBar{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:15px;padding-bottom:14px;border-bottom:1px solid var(--line)}.monthLabel{display:block;font-size:10px;font-weight:800;margin-bottom:4px}.monthInput{margin:0!important;width:170px}.monthInfo{font-size:11px;color:var(--muted);padding-bottom:9px;font-weight:700}.twoCols{display:grid;grid-template-columns:1fr 1fr;gap:15px}.adminSection{margin-bottom:15px}.smallNote{font-size:10px;color:var(--muted);margin-top:9px}.messageResult{font-size:11px;color:var(--g);margin-top:10px}.dangerText{color:var(--red)}
 @media(max-width:950px){.heroGrid,.aboutGrid,.adminGrid{grid-template-columns:1fr}.achievements{grid-template-columns:1fr 1fr}.memberGrid{grid-template-columns:1fr 1fr}.certGrid{grid-template-columns:1fr 1fr}.adminStats{grid-template-columns:1fr 1fr}.budgetPublic{grid-template-columns:1fr 1fr}.twoCols{grid-template-columns:1fr}}
-@media(max-width:650px){.wrap{width:calc(100% - 24px)}nav{display:none}.menu{display:block}.nav.open nav{display:flex;position:absolute;top:68px;left:0;right:0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px;flex-direction:column;align-items:stretch}.admin{margin:4px 0 0}.hero{padding:62px 0}.hero h1{letter-spacing:-3px}.sectionHead{align-items:flex-start;flex-direction:column}.achievements,.memberGrid,.certGrid,.budgetPublic{grid-template-columns:1fr}.stats,.financeCards{grid-template-columns:1fr}.tools,.tools input{width:100%}.adminStats{grid-template-columns:1fr 1fr}.panelGrid{grid-template-columns:1fr}.foot{flex-direction:column;gap:7px}.cert img{height:auto;max-height:430px}.contactBox{align-items:flex-start;flex-direction:column}}
+@media(max-width:650px){
+  .wrap{width:calc(100% - 24px)}
+
+  nav{display:none}
+  .menu{display:block}
+
+  .nav.open nav{
+    display:flex;
+    position:absolute;
+    top:68px;
+    left:0;
+    right:0;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:8px;
+    flex-direction:column;
+    align-items:stretch
+  }
+
+  .admin{margin:4px 0 0}
+
+  .hero{padding:62px 0}
+  .hero h1{letter-spacing:-3px}
+
+  .sectionHead{
+    align-items:flex-start;
+    flex-direction:column
+  }
+
+  .achievements,
+  .memberGrid,
+  .certGrid,
+  .budgetPublic{
+    grid-template-columns:1fr
+  }
+
+  .stats,
+  .financeCards{
+    grid-template-columns:1fr
+  }
+
+  .tools,
+  .tools input{
+    width:100%
+  }
+
+  .foot{
+    flex-direction:column;
+    gap:7px
+  }
+
+  .cert img{
+    height:auto;
+    max-height:430px
+  }
+
+  .contactBox{
+    align-items:flex-start;
+    flex-direction:column
+  }
+
+  /* ADMIN MOBILE */
+
+  .adminMain{
+    padding:20px 0 35px
+  }
+
+  .adminNav{
+    min-height:auto;
+    padding:12px 0;
+    flex-direction:column;
+    align-items:stretch;
+    gap:12px
+  }
+
+  .adminNav h1{
+    font-size:18px
+  }
+
+  .adminNav .buttons{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:7px;
+    width:100%
+  }
+
+  .adminNav .buttons .btn{
+    width:100%;
+    margin:0;
+    padding:9px 6px;
+    font-size:11px
+  }
+
+  .adminNav .buttons .btn:last-child{
+    grid-column:1 / -1
+  }
+
+  .adminStats{
+    grid-template-columns:1fr 1fr;
+    gap:8px
+  }
+
+  .adminStat{
+    padding:16px 12px
+  }
+
+  .adminStat b{
+    font-size:20px
+  }
+
+  .adminGrid{
+    grid-template-columns:1fr;
+    gap:12px
+  }
+
+  .panel{
+    padding:17px
+  }
+
+  .panel h2{
+    font-size:15px
+  }
+
+  .panelGrid{
+    grid-template-columns:1fr
+  }
+
+  .twoCols{
+    grid-template-columns:1fr;
+    gap:12px
+  }
+
+  .subBar{
+    flex-direction:column;
+    align-items:stretch;
+    gap:8px
+  }
+
+  .monthInput{
+    width:100%
+  }
+
+  .monthInfo{
+    padding-bottom:0
+  }
+
+  /* PAYMENT TABLE */
+
+  .tableWrap{
+    width:100%;
+    overflow:visible
+  }
+
+  table{
+    width:100%;
+    min-width:0;
+    table-layout:fixed
+  }
+
+  th,
+  td{
+    padding:9px 5px;
+    font-size:10px;
+    overflow-wrap:anywhere
+  }
+
+  th{
+    font-size:8px
+  }
+
+  /* Hide Mobile + Email columns from payment table */
+  #paymentTable tr > th:nth-child(2),
+  #paymentTable tr > td:nth-child(2),
+  #paymentTable tr > th:nth-child(3),
+  #paymentTable tr > td:nth-child(3){
+    display:none
+  }
+
+  #paymentTable th:nth-child(1),
+  #paymentTable td:nth-child(1){
+    width:38%
+  }
+
+  #paymentTable th:nth-child(4),
+  #paymentTable td:nth-child(4){
+    width:27%
+  }
+
+  #paymentTable th:nth-child(5),
+  #paymentTable td:nth-child(5){
+    width:35%
+  }
+
+  /* Budget table */
+
+  #budgetTable th,
+  #budgetTable td{
+    padding:9px 5px
+  }
+
+  #budgetTable th:nth-child(1),
+  #budgetTable td:nth-child(1){
+    width:30%
+  }
+
+  #budgetTable th:nth-child(2),
+  #budgetTable td:nth-child(2){
+    width:18%
+  }
+
+  #budgetTable th:nth-child(3),
+  #budgetTable td:nth-child(3){
+    width:18%
+  }
+
+  #budgetTable th:nth-child(4),
+  #budgetTable td:nth-child(4){
+    width:18%
+  }
+
+  #budgetTable th:nth-child(5),
+  #budgetTable td:nth-child(5){
+    width:16%
+  }
+
+  .action{
+    padding:6px 5px;
+    font-size:8px;
+    margin:1px
+  }
+
+  .input,
+  .select,
+  .textarea{
+    font-size:14px
+  }
+
+  .textarea{
+    min-height:110px
+  }
+
+  .modal{
+    padding:12px
+  }
+
+  .modalCard{
+    padding:20px
+  }
+}
 </style>
 </head>
 <body>
