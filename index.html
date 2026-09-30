@@ -33,7 +33,14 @@ footer{background:#09391e;color:#aebeb3;padding:25px 0;font-size:11px}.foot{disp
 @keyframes adminRise{0%{opacity:0;transform:translateY(16px)}100%{opacity:1;transform:none}}
 @media(max-width:650px){.siteSplashLogo{width:180px}.reveal{transform:translateY(22px)}.achievement:hover,.cert:hover,.member:hover,.financeCard:hover,.budgetPublic .item:hover,.details:hover,.value:hover,.panel:hover,.adminStat:hover{transform:none;box-shadow:0 14px 40px #164d2b0d}}
 @media(max-width:650px){
-  html,body{
+  *,
+  *::before,
+  *::after{
+    box-sizing:border-box;
+  }
+
+  html,
+  body{
     width:100%;
     max-width:100%;
     overflow-x:hidden;
@@ -44,44 +51,68 @@ footer{background:#09391e;color:#aebeb3;padding:25px 0;font-size:11px}.foot{disp
     max-width:100%;
   }
 
-  nav{
-    display:none;
+  .adminPage,
+  .adminMain,
+  .adminGrid,
+  .adminGrid > *,
+  .panel,
+  .panelGrid,
+  .twoCols,
+  .waPanel{
+    width:100%;
+    max-width:100%;
+    min-width:0;
   }
 
-  .menu{
-    display:block;
+  .adminGrid,
+  .panelGrid,
+  .twoCols{
+    grid-template-columns:1fr;
   }
 
-  .nav.open nav{
-    display:flex;
-    position:absolute;
-    top:68px;
-    left:0;
-    right:0;
-    width:auto;
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:8px;
-    padding:8px;
+  .adminStats{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .adminNav{
+    width:100%;
+    max-width:100%;
     flex-direction:column;
     align-items:stretch;
+    gap:10px;
   }
 
-  .admin{
-    margin:4px 0 0;
-  }
-
-  .hero{
-    padding:62px 0;
-  }
-
-  .hero h1{
-    letter-spacing:-3px;
-  }
-
-  .sectionHead{
-    align-items:flex-start;
+  .adminNav .buttons{
+    width:100%;
+    max-width:100%;
     flex-direction:column;
+  }
+
+  .adminNav .buttons .btn{
+    width:100%;
+  }
+
+  .tableWrap{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .tableWrap table{
+    min-width:620px;
+  }
+
+  .tools{
+    width:100%;
+    max-width:100%;
+  }
+
+  .tools input,
+  .tools select,
+  .tools button{
+    max-width:100%;
   }
 
   .achievements,
@@ -94,60 +125,6 @@ footer{background:#09391e;color:#aebeb3;padding:25px 0;font-size:11px}.foot{disp
   .stats,
   .financeCards{
     grid-template-columns:1fr;
-  }
-
-  .tools,
-  .tools input{
-    width:100%;
-    max-width:100%;
-  }
-
-  .adminStats{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .adminGrid,
-  .twoCols,
-  .panelGrid{
-    grid-template-columns:1fr;
-  }
-
-  .adminNav{
-    flex-direction:column;
-    align-items:stretch;
-    gap:10px;
-    padding-top:12px;
-    padding-bottom:12px;
-  }
-
-  .adminNav .buttons{
-    width:100%;
-    flex-direction:column;
-  }
-
-  .adminNav .buttons .btn{
-    width:100%;
-  }
-
-  .tableWrap{
-    width:100%;
-    max-width:100%;
-    overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
-  }
-
-  .tableWrap table{
-    min-width:620px;
-  }
-
-  .adminMain{
-    width:100%;
-    overflow-x:hidden;
-  }
-
-  .panel{
-    width:100%;
-    max-width:100%;
   }
 
   .foot{
