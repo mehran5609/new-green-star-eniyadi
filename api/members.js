@@ -8,9 +8,10 @@ module.exports=async function(req,res){
       if(error)throw error;return json(res,200,{members:data||[]});
     }
     if(req.method==='POST'){
-      const b=req.body||{};const name=String(b.name||'').trim(),role=String(b.role||'').trim(),mobile=String(b.mobile||'').trim(),email=String(b.email||'').trim().toLowerCase();
+      const b=req.body||{};const name=String(b.name||'').trim(),role=String(b.role||'').trim(),mobile=String(b.mobile||'').trim(),email=String(b.email||'').trim().toLowerCase(),photo_url=b.photo_url?String(b.photo_url):null;
       if(!name||!role||!mobile||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))return json(res,400,{error:'Name, role, mobile and a valid email are required'});
-      const {data,error}=await client.from('members').insert({name,role,mobile,email}).select('*').single();if(error)throw error;return json(res,201,{member:data});
+      if(photo_url&&(!photo_url.startsWith('data:image/')||photo_url.length>700000))return json(res,400,{error:'Invalid or oversized member photo'});
+      const {data,error}=await client.from('members').insert({name,role,mobile,email,photo_url}).select('*').single();if(error)throw error;return json(res,201,{member:data});
     }
     if(req.method==='DELETE'){
       const id=String(req.query.id||'');if(!id)return json(res,400,{error:'Member id is required'});
