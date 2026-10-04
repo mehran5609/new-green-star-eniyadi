@@ -1,66 +1,22 @@
-const SUPABASE_URL=process.env.SUPABASE_URL;
-const SERVICE_KEY=process.env.SUPABASE_SERVICE_ROLE_KEY;
-
-function json(res,status,body){
-  res.status(status).setHeader('Content-Type','application/json');
-  return res.end(JSON.stringify(body));
-}
-
-function cookie(req){
-  return req.headers.cookie||'';
-}
-
-function isAdmin(req){
-  const c=cookie(req);
-  return c.includes('admin_session=')||c.includes('ngs_admin_session=')||c.includes('adminSession=');
-}
-
-async function sb(path,options={}){
-  const r=await fetch(`${SUPABASE_URL}/rest/v1/${path}`,{
-    ...options,
-    headers:{
-      apikey:SERVICE_KEY,
-      Authorization:`Bearer ${SERVICE_KEY}`,
-      'Content-Type':'application/json',
-      Prefer:'return=representation',
-      ...(options.headers||{})
-    }
-  });
-
-  const text=await r.text();
-  let data={};
-
-  try{
-    data=text?JSON.parse(text):{};
-  }catch{
-    data={error:text};
-  }
-
-  if(!r.ok){
-    throw new Error(
-      data.message||
-      data.error_description||
-      data.hint||
-      data.error||
-      'Supabase request failed'
-    );
-  }
-
-  return data;
-}
+const {db,json,requireAdmin}=require('./_lib');
 
 module.exports=async function handler(req,res){
-  if(!isAdmin(req)){
-    return json(res,401,{error:'Admin login required'});
-  }
+  if(!requireAdmin(req,res))return;
 
   try{
-    if(req.method==='GET'){
-      const rows=await sb(
-        'member_extra_budgets?select=*&order=created_at.desc'
-      );
+    const client=db();
 
-      return json(res,200,{extraDues:rows});
+    if(req.method==='GET'){
+      const {data,error}=await client
+        .from('member_extra_budgets')
+        .select('*')
+        .order('created_at',{ascending:false});
+
+      if(error)throw error;
+
+      return json(res,200,{
+        extraDues:data||[]
+      });
     }
 
     if(req.method==='POST'){
@@ -78,10 +34,10 @@ module.exports=async function handler(req,res){
       }
 
       if(
-        !Number.isFinite(total)||
-        total<0||
-        !Number.isFinite(paid)||
-        paid<0||
+        !Number.isFinite(total) ||
+        total<0 ||
+        !Number.isFinite(paid) ||
+        paid<0 ||
         paid>total
       ){
         return json(res,400,{
@@ -89,21 +45,21 @@ module.exports=async function handler(req,res){
         });
       }
 
-      const rows=await sb(
-        'member_extra_budgets',
-        {
-          method:'POST',
-          body:JSON.stringify({
-            member_id:memberId,
-            reason:reason,
-            total_amount:total,
-            paid_amount:paid
-          })
-        }
-      );
+      const {data,error}=await client
+        .from('member_extra_budgets')
+        .insert({
+          member_id:memberId,
+          reason,
+          total_amount:total,
+          paid_amount:paid
+        })
+        .select('*')
+        .single();
+
+      if(error)throw error;
 
       return json(res,200,{
-        extraDue:rows[0]
+        extraDue:data
       });
     }
 
@@ -117,11 +73,16 @@ module.exports=async function handler(req,res){
         });
       }
 
-      const currentRows=await sb(
-        `member_extra_budgets?id=eq.${encodeURIComponent(id)}&select=*`
-      );
+      const {
+        data:current,
+        error:findError
+      }=await client
+        .from('member_extra_budgets')
+        .select('*')
+        .eq('id',id)
+        .maybeSingle();
 
-      const current=currentRows[0];
+      if(findError)throw findError;
 
       if(!current){
         return json(res,404,{
@@ -140,10 +101,10 @@ module.exports=async function handler(req,res){
           :Number(b.paidAmount);
 
       if(
-        !Number.isFinite(total)||
-        total<0||
-        !Number.isFinite(paid)||
-        paid<0||
+        !Number.isFinite(total) ||
+        total<0 ||
+        !Number.isFinite(paid) ||
+        paid<0 ||
         paid>total
       ){
         return json(res,400,{
@@ -157,23 +118,27 @@ module.exports=async function handler(req,res){
       };
 
       if(b.memberId!==undefined){
-        patch.member_id=String(b.memberId);
+        patch.member_id=String(b.memberId).trim();
       }
 
       if(b.reason!==undefined){
         patch.reason=String(b.reason).trim();
       }
 
-      const rows=await sb(
-        `member_extra_budgets?id=eq.${encodeURIComponent(id)}`,
-        {
-          method:'PATCH',
-          body:JSON.stringify(patch)
-        }
-      );
+      const {
+        data,
+        error
+      }=await client
+        .from('member_extra_budgets')
+        .update(patch)
+        .eq('id',id)
+        .select('*')
+        .single();
+
+      if(error)throw error;
 
       return json(res,200,{
-        extraDue:rows[0]
+        extraDue:data
       });
     }
 
@@ -188,14 +153,16 @@ module.exports=async function handler(req,res){
         });
       }
 
-      await sb(
-        `member_extra_budgets?id=eq.${encodeURIComponent(id)}`,
-        {
-          method:'DELETE'
-        }
-      );
+      const {error}=await client
+        .from('member_extra_budgets')
+        .delete()
+        .eq('id',id);
 
-      return json(res,200,{ok:true});
+      if(error)throw error;
+
+      return json(res,200,{
+        ok:true
+      });
     }
 
     return json(res,405,{
