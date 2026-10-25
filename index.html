@@ -243,7 +243,7 @@ let publicData={members:[],payments:[],achievements:[],budgets:[],memories:[],ex
 let adminData={members:[],payments:[],achievements:[],budgets:[],memories:[],extraDues:[],monthlyFee:100};
 let previousPaymentMemberId=null;
 const PREVIOUS_SUBSCRIPTION_REASON='Previous monthly subscription';
-const isPreviousSubscriptionDue=d=>{const text=[d&&d.reason,d&&d.note,d&&d.description,d&&d.category].filter(Boolean).join(' ').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();return text.includes('previous monthly subscription')||text.includes('previous subscription')||text.includes('subscription arrears')||text.includes('monthly subscription arrears')||text.includes('previous payment')||text.includes('subscription pending');};
+const isPreviousSubscriptionDue=d=>{const reason=String(d&&d.reason||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();const text=[d&&d.reason,d&&d.note,d&&d.description,d&&d.category].filter(Boolean).join(' ').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();return reason===PREVIOUS_SUBSCRIPTION_REASON.toLowerCase()||reason.includes('previous')||reason.includes('arrear')||reason.includes('subscription')||text.includes('previous')||text.includes('arrear')||text.includes('subscription pending')||text.includes('monthly fee pending');};
 const esc=s=>{const d=document.createElement('div');d.textContent=s??'';return d.innerHTML};
 const initials=n=>String(n||'').split(/\s+/).filter(Boolean).map(x=>x[0]).slice(0,2).join('').toUpperCase();
 const money=n=>new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:2}).format(Number(n)||0);
