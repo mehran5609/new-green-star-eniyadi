@@ -1,3 +1,4 @@
+
 const {db,json,monthNow}=require('./_lib');
 
 module.exports=async function(req,res){
@@ -42,7 +43,7 @@ module.exports=async function(req,res){
         .maybeSingle(),
 
       client.from('member_extra_budgets')
-        .select('member_id,total_amount,paid_amount')
+        .select('id,member_id,reason,total_amount,paid_amount')
     ]);
 
     const error=me||pe||ae||be||xe||se||de;
